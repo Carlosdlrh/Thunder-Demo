@@ -36,9 +36,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         print("¡Usuario creado con exito!")
                         //Quary para conectarse y cargar usuario registrado a base de datos
                         let ref = FIRDatabase.database().reference().child("Usuarios").child(user!.uid)
+                        //Libreria directa de incrucion de objetos
+                        let her = ["Nombre":"", "Descripción":"", "Pro":"", "Email":user!.email]
                         
-                        ref.child("email").setValue(user!.email!)
-                        ref.child("nombre").setValue(String(""))
+                        ref.setValue(her)
                         
                         print("Bienbenido:\(String(describing: user))")
                         self.performSegue(withIdentifier: "login", sender: nil)

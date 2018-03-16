@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import Firebase
 
 class MiEventoViewController: UIViewController {
 
+    var nombre = ""
+    
+    @IBOutlet weak var nombreEvento: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        nombreEvento.text = nombre
         
     }
 

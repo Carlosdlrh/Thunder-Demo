@@ -34,7 +34,7 @@ class MisEventosViewController: UIViewController, UITableViewDataSource, UITable
         //Buscar todos mis eventos creados
         print("Revisando tus eventos creados")
         //Conectandome directamente con la lista de Eventos Creados por el usuario
-        let ref = FIRDatabase.database().reference().child("Usuarios").child(FIRAuth.auth()!.currentUser!.uid).child("Eventos")
+        let ref = FIRDatabase.database().reference().child("Usuarios").child(FIRAuth.auth()!.currentUser!.uid).child("Eventos").child("Mis Eventos")
         //Cuando un Child es agregado al identificador de Eventos se puede acceder directamente a el con solo mensionarlo como clave
         ref.observe(FIRDataEventType.childAdded/*.value*/, with: { snapshot in
             print(snapshot.value!)

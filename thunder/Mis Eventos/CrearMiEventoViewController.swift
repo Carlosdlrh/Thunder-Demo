@@ -20,20 +20,28 @@ class CrearMiEventoViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func crearBoton(_ sender: Any) {
-        //Conexion
-        let ref = FIRDatabase.database().reference().child("Usuarios").child(FIRAuth.auth()!.currentUser!.uid).child("Eventos")
-        let nomb = nombreEventoTextField!.text!
-        ref.child("\(nomb)").child("Inscritos").setValue("0")
-        ref.child("\(nomb)").child("Mensajes").setValue("0")
+        
+        //Mi libreria para conectarse
+        let her = ["Nombre":nombreEventoTextField!.text!, "Inscritos": "0", "Mensajes":"0"]
+        
+        //Conexion y guardar todo en base de datos
+        let ref = FIRDatabase.database().reference().child("Usuarios").child(FIRAuth.auth()!.currentUser!.uid).child("Eventos").child("Mis Eventos")
+            ref.childByAutoId().setValue(her)
+        
+        performSegue(withIdentifier: "creado", sender: nil)
     }
     
-    @IBAction func cancelarBoton(_ sender: Any) {
-        //performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {//Controles para quitar el teclado de la pantalla
         self.view.endEditing(true)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //Tomar todo lo ya escrito y enviarlo a la pantalla de evento
+        let nextVC = segue.destination as! MiEventoViewController
+        nextVC.nombre = nombreEventoTextField.text!
+    }
+    
+
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == nombreEventoTextField {
