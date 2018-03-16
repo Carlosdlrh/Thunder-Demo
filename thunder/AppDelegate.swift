@@ -1,12 +1,13 @@
 //
 //  AppDelegate.swift
-//  thunder
+//  thunder Demo
 //
 //  Created by CarlosDeLaRocha on 3/10/18.
 //  Copyright © 2018 Bonsai. All rights reserved.
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FIRApp.configure()
         return true
     }
 
