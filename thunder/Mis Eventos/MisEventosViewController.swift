@@ -36,14 +36,19 @@ class MisEventosViewController: UIViewController, UITableViewDataSource, UITable
         //Conectandome directamente con la lista de Eventos Creados por el usuario
         let ref = FIRDatabase.database().reference().child("Usuarios").child(FIRAuth.auth()!.currentUser!.uid).child("Eventos").child("Mis Eventos")
         //Cuando un Child es agregado al identificador de Eventos se puede acceder directamente a el con solo mensionarlo como clave
-        ref.observe(FIRDataEventType.childAdded/*.value*/, with: { snapshot in
+        ref.observe(FIRDataEventType.childAdded, with: { snapshot in
             print(snapshot.value!)
-            
             let snap = Even()
-            //snap.EveNom = snapshot.value(forKeyPath: "Eventos") as! String
-            //snap.EveNom = snapshot.value(forKey: "Eventos") as! String
-            snap.EveNom = snapshot.key
+            
+            let eventoDir = snapshot.value as! [String: Any]
+            
+            snap.EveNom = eventoDir["Nombre"] as! String
+            snap.Eveuid = snapshot.key
+            
+            //---- Test de immprenta
+            print(snap.Eveuid)
             print(snap.EveNom)
+            
             self.Eventos.append(snap)
             self.tableView.reloadData()
             
