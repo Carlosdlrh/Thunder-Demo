@@ -33,7 +33,7 @@ class ExplorarEventoViewController: UIViewController, UITableViewDataSource, UIT
         //Buscar todos mis eventos creados
         print("Revisando tus eventos creados...")
         //Conectandome directamente con la lista de Eventos Creados por el usuario
-        let ref = FIRDatabase.database().reference().child("Eventos").child("Evetos Generales")
+        let ref = FIRDatabase.database().reference().child("Eventos").child("Eventos Generales")
         
         
         //Cuando un Child es agregado al identificador de Eventos se puede acceder directamente a el con solo mensionarlo como clave
