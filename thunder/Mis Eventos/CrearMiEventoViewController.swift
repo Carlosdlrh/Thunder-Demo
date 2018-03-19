@@ -33,11 +33,14 @@ class CrearMiEventoViewController: UIViewController, UITextFieldDelegate {
         let ref = FIRDatabase.database().reference().child("Eventos").child("Evetos Generales").childByAutoId()
             ref.setValue(her)
         
+        /* Guardar el Id del Evento en el usuario
         let IdEVento = ref
+        let refUsuario = FIRDatabase.database().reference().child("Usuarios").child(FIRAuth.auth()!.currentUser!.uid).child("Eventos").child("Mis Eventos").childByAutoId()
+        let Eventy = IdEVento.key
+        let her1 = ["Evento ID":Eventy]
         
-        let refUsuario = FIRDatabase.database().reference().child("Usuarios").child(FIRAuth.auth()!.currentUser!.uid).child("Mis Eventos").child("Evento")
+        refUsuario.setValue(her1)*/
         
-        refUsuario.setValue(IdEVento.key)
         
         performSegue(withIdentifier: "creado", sender: nil)
     }

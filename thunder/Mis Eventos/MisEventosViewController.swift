@@ -32,14 +32,10 @@ class MisEventosViewController: UIViewController, UITableViewDataSource, UITable
         self.tableView.delegate = self
         
         //Buscar todos mis eventos creados
-        print("Revisando tus eventos creados")
+        print("Revisando tus eventos creados...")
         //Conectandome directamente con la lista de Eventos Creados por el usuario
-        //Conectandose con el creadorID
-        let ref1 = FIRDatabase.database().reference().child("Usuarios").child(FIRAuth.auth()!.currentUser!.uid)
-        let creador = ref1.key
-        print(creador)
+        let ref = FIRDatabase.database().reference().child("Eventos").child("Evetos Generales")
         
-        let ref = FIRDatabase.database().reference().child("Eventos").child(FIRAuth.auth()!.currentUser!.uid).child("Mis Eventos")
         
         //Cuando un Child es agregado al identificador de Eventos se puede acceder directamente a el con solo mensionarlo como clave
         ref.observe(FIRDataEventType.childAdded, with: { snapshot in
@@ -48,16 +44,23 @@ class MisEventosViewController: UIViewController, UITableViewDataSource, UITable
             
             let eventoDir = snapshot.value as! [String: Any]
             
-            snap.EveNom = eventoDir["Nombre"] as! String
-            snap.Eveuid = snapshot.key
+            let uid = FIRDatabase.database().reference().child("Usuarios").child(FIRAuth.auth()!.currentUser!.uid)
+            let uidc = uid.key
+            let comparacion1 = eventoDir["CreadorID"] as! String
             
-            //---- Test de immprenta
-            print(snap.Eveuid)
-            print(snap.EveNom)
-            
-            self.Eventos.append(snap)
-            self.tableView.reloadData()
-            
+            if comparacion1 == uidc{
+                snap.EveNom = eventoDir["Nombre"] as! String
+                snap.Eveuid = snapshot.key
+                
+                //---- Test de immprenta
+                print(snap.Eveuid)
+                print(snap.EveNom)
+                
+                self.Eventos.append(snap)
+                self.tableView.reloadData()
+            }else{
+                print("Error")
+            }
         })
     }
     

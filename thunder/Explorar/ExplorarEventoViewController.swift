@@ -25,6 +25,35 @@ class ExplorarEventoViewController: UIViewController, UITableViewDataSource, UIT
         colors.append(UIColor(red: 143/255, green: 0/255, blue: 108/255, alpha: 2))
         navigationController?.navigationBar.setGradientBackground(colors: colors)
         
+        //Cargar tabla
+        print("Cargando Tabla")
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        
+        //Buscar todos mis eventos creados
+        print("Revisando tus eventos creados...")
+        //Conectandome directamente con la lista de Eventos Creados por el usuario
+        let ref = FIRDatabase.database().reference().child("Eventos").child("Evetos Generales")
+        
+        
+        //Cuando un Child es agregado al identificador de Eventos se puede acceder directamente a el con solo mensionarlo como clave
+        ref.observe(FIRDataEventType.childAdded, with: { snapshot in
+            print(snapshot.value!)
+            let snap = Even()
+            
+            let eventoDir = snapshot.value as! [String: Any]
+            
+            snap.EveNom = eventoDir["Nombre"] as! String
+            snap.Eveuid = snapshot.key
+            
+            //---- Test de immprenta
+            print(snap.Eveuid)
+            print(snap.EveNom)
+            
+            self.Eventos.append(snap)
+            self.tableView.reloadData()
+        })
+
     }
     
     
