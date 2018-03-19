@@ -884,6 +884,7 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="tableView" destination="Yar-hQ-NNi" id="Kz6-2c-MJL"/>
                         <segue destination="h1n-8X-XGr" kind="show" identifier="explorarEvento" id="mcs-eo-NGQ"/>
                         <segue destination="zAd-KX-Ohk" kind="show" identifier="mundoEventos" id="rtc-xF-gBs"/>
                     </connections>

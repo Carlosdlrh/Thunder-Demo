@@ -22,11 +22,22 @@ class CrearMiEventoViewController: UIViewController, UITextFieldDelegate {
     @IBAction func crearBoton(_ sender: Any) {
         
         //Mi libreria para conectarse
-        let her = ["Nombre":nombreEventoTextField!.text!, "Inscritos": "0", "Mensajes":"0"]
+        //Creador guardarlo para pasarlo como Creador del Evento
+        let ref1 = FIRDatabase.database().reference().child("Usuarios").child(FIRAuth.auth()!.currentUser!.uid)
+        let creador = ref1.key
+        print(creador)
+        
+        let her = ["CreadorID":creador, "Nombre":nombreEventoTextField!.text!, "Inscritos": "0", "Mensajes":"0"] as [String : Any]
         
         //Conexion y guardar todo en base de datos
-        let ref = FIRDatabase.database().reference().child("Usuarios").child(FIRAuth.auth()!.currentUser!.uid).child("Eventos").child("Mis Eventos")
-            ref.childByAutoId().setValue(her)
+        let ref = FIRDatabase.database().reference().child("Eventos").child("Evetos Generales").childByAutoId()
+            ref.setValue(her)
+        
+        let IdEVento = ref
+        
+        let refUsuario = FIRDatabase.database().reference().child("Usuarios").child(FIRAuth.auth()!.currentUser!.uid).child("Mis Eventos").child("Evento")
+        
+        refUsuario.setValue(IdEVento.key)
         
         performSegue(withIdentifier: "creado", sender: nil)
     }
