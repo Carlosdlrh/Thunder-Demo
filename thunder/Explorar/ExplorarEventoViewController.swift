@@ -33,11 +33,11 @@ class ExplorarEventoViewController: UIViewController, UITableViewDataSource, UIT
         //Buscar todos mis eventos creados
         print("Revisando tus eventos creados...")
         //Conectandome directamente con la lista de Eventos Creados por el usuario
-        let ref = FIRDatabase.database().reference().child("Eventos").child("Eventos Generales")
+        let ref = Database.database().reference().child("Eventos").child("Eventos Generales")
         
         
         //Cuando un Child es agregado al identificador de Eventos se puede acceder directamente a el con solo mensionarlo como clave
-        ref.observe(FIRDataEventType.childAdded, with: { snapshot in
+        ref.observe(DataEventType.childAdded, with: { snapshot in
             print(snapshot.value!)
             let snap = Even()
             
@@ -56,7 +56,7 @@ class ExplorarEventoViewController: UIViewController, UITableViewDataSource, UIT
 
     }
     
-    
+    //Botones------------------------------------
     @IBAction func explorarBoton(_ sender: Any) {
         performSegue(withIdentifier: "explorarEvento", sender: nil)
     }
@@ -64,7 +64,15 @@ class ExplorarEventoViewController: UIViewController, UITableViewDataSource, UIT
     @IBAction func mundoBoton(_ sender: Any) {
         performSegue(withIdentifier: "mundoEventos", sender: nil)
     }
-    
+    //Preparar el Envio--------------------------
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "explorarEvento"{
+            let nextVC = segue.destination as! EventoViewController
+            nextVC.Eventos = sender as! Even
+        }
+        
+    }
+    //Funciones de la tabla----------------------
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Eventos.count
     }
@@ -78,14 +86,10 @@ class ExplorarEventoViewController: UIViewController, UITableViewDataSource, UIT
         return cell
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //Selecionar Evento
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let evento = Eventos[indexPath.row]
+        performSegue(withIdentifier: "explorarEvento", sender: evento)
+        
     }
-    */
-
 }

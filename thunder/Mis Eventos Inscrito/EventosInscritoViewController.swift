@@ -32,7 +32,7 @@ class EventosInscritoViewController: UIViewController, UITableViewDataSource, UI
         
         //Crear Conexion
         //Buscar todos los eventos creados
-        let ref = FIRDatabase.database().reference().child("Usuarios").childByAutoId()
+        let ref = Database.database().reference().child("Usuarios").childByAutoId()
         
         ref.child("Eventos").observe(.value, with: { snapshot in
             print(snapshot.value!)

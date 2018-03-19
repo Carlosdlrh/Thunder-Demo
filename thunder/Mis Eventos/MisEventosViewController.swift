@@ -34,20 +34,22 @@ class MisEventosViewController: UIViewController, UITableViewDataSource, UITable
         //Buscar todos mis eventos creados
         print("Revisando tus eventos creados...")
         //Conectandome directamente con la lista de Eventos Creados por el usuario
-        let ref = FIRDatabase.database().reference().child("Eventos").child("Eventos Generales")
+        let ref = Database.database().reference().child("Eventos").child("Eventos Generales")
         
         
         //Cuando un Child es agregado al identificador de Eventos se puede acceder directamente a el con solo mensionarlo como clave
-        ref.observe(FIRDataEventType.childAdded, with: { snapshot in
+        ref.observe(DataEventType.childAdded, with: { snapshot in
             print(snapshot.value!)
             let snap = Even()
             
-            let eventoDir = snapshot.value as! [String: Any]
-            
-            let uid = FIRDatabase.database().reference().child("Usuarios").child(FIRAuth.auth()!.currentUser!.uid)
+            //Objetos a Comparar
+            let uid = Database.database().reference().child("Usuarios").child(Auth.auth().currentUser!.uid)
             let uidc = uid.key
+            
+            let eventoDir = snapshot.value as! [String: Any]
             let comparacion1 = eventoDir["CreadorID"] as! String
             
+            //Comparación
             if comparacion1 == uidc{
                 snap.EveNom = eventoDir["Nombre"] as! String
                 snap.Eveuid = snapshot.key
@@ -64,6 +66,8 @@ class MisEventosViewController: UIViewController, UITableViewDataSource, UITable
         })
     }
     
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Eventos.count
     }
@@ -76,7 +80,20 @@ class MisEventosViewController: UIViewController, UITableViewDataSource, UITable
         
         return cell
     }
-    
+    //Selecionar Evento
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let evento = Eventos[indexPath.row]
+        performSegue(withIdentifier: "miEvento", sender: evento)
+        
+    }
+    //Preparar para el Envio
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "miEvento"{
+            let nextVC = segue.destination as! MiEventoViewController
+            nextVC.Eventos = sender as! Even
+        }
+        
+    }
     
     @IBAction func crearEvento(_ sender: Any) {
         performSegue(withIdentifier: "crearEvento", sender: nil)

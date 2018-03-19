@@ -11,6 +11,8 @@ import Firebase
 
 class CrearMiEventoViewController: UIViewController, UITextFieldDelegate {
     
+    var Eventos = Even()
+    
     @IBOutlet weak var nombreEventoTextField: UITextField!
     
     override func viewDidLoad() {
@@ -23,26 +25,21 @@ class CrearMiEventoViewController: UIViewController, UITextFieldDelegate {
         
         //Mi libreria para conectarse
         //Creador guardarlo para pasarlo como Creador del Evento
-        let ref1 = FIRDatabase.database().reference().child("Usuarios").child(FIRAuth.auth()!.currentUser!.uid)
+        let ref1 = Database.database().reference().child("Usuarios").child(Auth.auth().currentUser!.uid)
         let creador = ref1.key
         print(creador)
         
         let her = ["CreadorID":creador, "Nombre":nombreEventoTextField!.text!, "Inscritos": "0", "Mensajes":"0"] as [String : Any]
         
         //Conexion y guardar todo en base de datos
-        let ref = FIRDatabase.database().reference().child("Eventos").child("Evetos Generales").childByAutoId()
+        //Guardar el Id del Evento en el usuario
+        let ref = Database.database().reference().child("Eventos").child("Eventos Generales").childByAutoId()
             ref.setValue(her)
         
-        /* Guardar el Id del Evento en el usuario
-        let IdEVento = ref
-        let refUsuario = FIRDatabase.database().reference().child("Usuarios").child(FIRAuth.auth()!.currentUser!.uid).child("Eventos").child("Mis Eventos").childByAutoId()
-        let Eventy = IdEVento.key
-        let her1 = ["Evento ID":Eventy]
         
-        refUsuario.setValue(her1)*/
-        
-        
-        performSegue(withIdentifier: "creado", sender: nil)
+        //performSegue(withIdentifier: "creado", sender: nil) -- Regresar Directo a la lista de eventos creados
+        //Regresar directo al menú de eventos creados
+        navigationController!.popToRootViewController(animated: true)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {//Controles para quitar el teclado de la pantalla
@@ -51,8 +48,9 @@ class CrearMiEventoViewController: UIViewController, UITextFieldDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //Tomar todo lo ya escrito y enviarlo a la pantalla de evento
-        let nextVC = segue.destination as! MiEventoViewController
-        nextVC.nombre = nombreEventoTextField.text!
+        //let nextVC = segue.destination as! MiEventoViewController
+        //nextVC.Eventos = sender as! Even
+
     }
     
 

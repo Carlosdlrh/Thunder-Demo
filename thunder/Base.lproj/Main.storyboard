@@ -1279,6 +1279,7 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="e34-iK-Ys2"/>
                     <connections>
+                        <outlet property="nombreEvento" destination="xXh-6j-ogH" id="OUh-fi-C0V"/>
                         <segue destination="mdL-ph-Xdp" kind="show" identifier="eventoReglamento" id="Blf-Uc-G0o"/>
                         <segue destination="suz-YQ-C0E" kind="show" identifier="eventoLugar" id="LNa-su-DhX"/>
                         <segue destination="m0O-Nn-cun" kind="show" identifier="eventoParticipantes" id="m9c-Qf-aYu"/>
@@ -1345,7 +1346,7 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ubf-As-UTU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5284" y="-1417"/>
+            <point key="canvasLocation" x="5420" y="-1417"/>
         </scene>
         <!--Participantes-->
         <scene sceneID="v77-ZO-b6W">
@@ -1403,6 +1404,6 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
         <segue reference="Gur-iB-2dB"/>
         <segue reference="c8B-L0-5VF"/>
         <segue reference="7sD-Zs-7Sz"/>
-        <segue reference="ZeU-fl-xTs"/>
+        <segue reference="L0M-7v-l1c"/>
     </inferredMetricsTieBreakers>
 </document>

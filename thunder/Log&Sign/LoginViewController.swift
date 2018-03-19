@@ -23,19 +23,19 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func accessTapped(_ sender: Any) {
         //Acceder a usuario
-        FIRAuth.auth()?.signIn(withEmail: loginTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
+        Auth.auth().signIn(withEmail: loginTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
             print("Intentamos acceder")
             if error != nil{
                 print("Error: \(String(describing: error))")
                 //Acceder a usuario
-                FIRAuth.auth()?.createUser(withEmail: self.loginTextField.text!, password: self.passwordTextField.text!, completion: { (user, error) in
+                Auth.auth().createUser(withEmail: self.loginTextField.text!, password: self.passwordTextField.text!, completion: { (user, error) in
                     print("Intentando Crear Usuario")
                     if error != nil{
                         print("Error: \(String(describing: error))")
                     }else{
                         print("¡Usuario creado con exito!")
                         //Quary para conectarse y cargar usuario registrado a base de datos
-                        let ref = FIRDatabase.database().reference().child("Usuarios").child(user!.uid)
+                        let ref = Database.database().reference().child("Usuarios").child(user!.uid)
                         //Libreria directa de incrucion de objetos
                         let her = ["Nombre":"", "Descripción":"", "Pro":"", "Email":user!.email]
                         
