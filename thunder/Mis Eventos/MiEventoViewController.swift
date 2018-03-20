@@ -25,6 +25,8 @@ class MiEventoViewController: UIViewController {
         colors.append(UIColor(red: 143/255, green: 0/255, blue: 108/255, alpha: 2))
         navigationController?.navigationBar.setGradientBackground(colors: colors)
         
+        imageView.moa.url = Eventos.FotoURL
+        
         // Do any additional setup after loading the view.
         nombreEvento.text = Eventos.EveNom
         
