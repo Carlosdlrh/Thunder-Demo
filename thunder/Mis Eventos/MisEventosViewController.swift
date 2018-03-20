@@ -80,6 +80,10 @@ class MisEventosViewController: UIViewController, UITableViewDataSource, UITable
         //Que aparescan solo los nombres en la tabla
         cell.textLabel?.text = evento.EveNom
         
+        //Ver imagen del Evento en la lista
+        cell.imageView?.image = UIImage(named: "PHOTO")
+        cell.imageView?.contentMode = .scaleAspectFit
+        
         return cell
     }
     //Selecionar Evento

@@ -94,7 +94,6 @@ class CrearMiEventoViewController: UIViewController, UIImagePickerControllerDele
         
     }
     
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {//Controles para quitar el teclado de la pantalla
         self.view.endEditing(true)
     }
