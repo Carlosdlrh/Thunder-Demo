@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SDWebImage
 
 class EventoViewController: UIViewController {
 
@@ -24,8 +23,6 @@ class EventoViewController: UIViewController {
         colors.append(UIColor(red: 19/255, green: 78/255, blue: 132/255, alpha: 2))
         colors.append(UIColor(red: 143/255, green: 0/255, blue: 108/255, alpha: 2))
         navigationController?.navigationBar.setGradientBackground(colors: colors)
-        
-        UIImageView.sd_setImage(with: Eventos.FotoURL!)
         
         nombreEvento.text = Eventos.EveNom
         

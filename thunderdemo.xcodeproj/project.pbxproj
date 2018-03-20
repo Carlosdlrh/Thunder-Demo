@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		49E8781216678C5430D7DEE0 /* Pods_thunder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D19A8BF1EDA0A4A36030BD /* Pods_thunder.framework */; };
+		71D79E95EF6D19F66D134512 /* Pods_thunder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A21EB600483457B5C81E78B /* Pods_thunder.framework */; };
 		818AA568205527560046CD50 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818AA567205527560046CD50 /* LoginViewController.swift */; };
 		818AA56A2056293F0046CD50 /* MisEventosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818AA5692056293F0046CD50 /* MisEventosViewController.swift */; };
 		818AA56D205638670046CD50 /* MiEventoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818AA56C205638670046CD50 /* MiEventoViewController.swift */; };
@@ -27,9 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		08D19A8BF1EDA0A4A36030BD /* Pods_thunder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_thunder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		35FC23C2D2B7B69A349222D5 /* Pods-thunder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thunder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-thunder/Pods-thunder.debug.xcconfig"; sourceTree = "<group>"; };
-		37FBB34998C1DA327D4F24BA /* Pods-thunder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thunder.release.xcconfig"; path = "Pods/Target Support Files/Pods-thunder/Pods-thunder.release.xcconfig"; sourceTree = "<group>"; };
+		3F787B91440F09289DEC16C0 /* Pods-thunder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thunder.release.xcconfig"; path = "Pods/Target Support Files/Pods-thunder/Pods-thunder.release.xcconfig"; sourceTree = "<group>"; };
 		818AA567205527560046CD50 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		818AA5692056293F0046CD50 /* MisEventosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisEventosViewController.swift; sourceTree = "<group>"; };
 		818AA56C205638670046CD50 /* MiEventoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiEventoViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +47,8 @@
 		81BE50322054DBA500C4ADFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81BE50352054DBA500C4ADFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81BE50372054DBA500C4ADFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A21EB600483457B5C81E78B /* Pods_thunder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_thunder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFE451B3C22C7CA4662D661C /* Pods-thunder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thunder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-thunder/Pods-thunder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,17 +56,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49E8781216678C5430D7DEE0 /* Pods_thunder.framework in Frameworks */,
+				71D79E95EF6D19F66D134512 /* Pods_thunder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		28260E9B0681395BC2AA65B7 /* Frameworks */ = {
+		420CAEA6E071DAE787FA8D11 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				08D19A8BF1EDA0A4A36030BD /* Pods_thunder.framework */,
+				FFE451B3C22C7CA4662D661C /* Pods-thunder.debug.xcconfig */,
+				3F787B91440F09289DEC16C0 /* Pods-thunder.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5554335807934283FFA2069F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A21EB600483457B5C81E78B /* Pods_thunder.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -128,8 +137,8 @@
 			children = (
 				81BE502A2054DBA500C4ADFA /* thunder */,
 				81BE50292054DBA500C4ADFA /* Products */,
-				9C5D06D686A4193DABFA596B /* Pods */,
-				28260E9B0681395BC2AA65B7 /* Frameworks */,
+				420CAEA6E071DAE787FA8D11 /* Pods */,
+				5554335807934283FFA2069F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,15 +171,6 @@
 			path = thunder;
 			sourceTree = "<group>";
 		};
-		9C5D06D686A4193DABFA596B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				35FC23C2D2B7B69A349222D5 /* Pods-thunder.debug.xcconfig */,
-				37FBB34998C1DA327D4F24BA /* Pods-thunder.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -178,12 +178,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81BE503A2054DBA500C4ADFA /* Build configuration list for PBXNativeTarget "thunder" */;
 			buildPhases = (
-				538C38FF2AF311DD2A6C9DD0 /* [CP] Check Pods Manifest.lock */,
+				E00110E8E470AAC63C4B69C0 /* [CP] Check Pods Manifest.lock */,
 				81BE50242054DBA500C4ADFA /* Sources */,
 				81BE50252054DBA500C4ADFA /* Frameworks */,
 				81BE50262054DBA500C4ADFA /* Resources */,
-				037AAC5F195795AAF9E182FD /* [CP] Embed Pods Frameworks */,
-				76469E9B3BB595B0B0DE2995 /* [CP] Copy Pods Resources */,
+				B2FE75C52F4598ACB8E08813 /* [CP] Embed Pods Frameworks */,
+				594DBE8F55A35B6E6E494E17 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,7 +248,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		037AAC5F195795AAF9E182FD /* [CP] Embed Pods Frameworks */ = {
+		594DBE8F55A35B6E6E494E17 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-thunder/Pods-thunder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2FE75C52F4598ACB8E08813 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -257,18 +272,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-thunder/Pods-thunder-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libwebp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,7 +287,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-thunder/Pods-thunder-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		538C38FF2AF311DD2A6C9DD0 /* [CP] Check Pods Manifest.lock */ = {
+		E00110E8E470AAC63C4B69C0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -292,21 +303,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		76469E9B3BB595B0B0DE2995 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-thunder/Pods-thunder-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -462,7 +458,7 @@
 		};
 		81BE503B2054DBA500C4ADFA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35FC23C2D2B7B69A349222D5 /* Pods-thunder.debug.xcconfig */;
+			baseConfigurationReference = FFE451B3C22C7CA4662D661C /* Pods-thunder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = thunder/thunder.entitlements;
@@ -479,7 +475,7 @@
 		};
 		81BE503C2054DBA500C4ADFA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37FBB34998C1DA327D4F24BA /* Pods-thunder.release.xcconfig */;
+			baseConfigurationReference = 3F787B91440F09289DEC16C0 /* Pods-thunder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = thunder/thunder.entitlements;
