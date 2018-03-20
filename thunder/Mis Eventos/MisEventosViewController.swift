@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import moa
 
 class MisEventosViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -83,6 +84,7 @@ class MisEventosViewController: UIViewController, UITableViewDataSource, UITable
         //Ver imagen del Evento en la lista
         cell.imageView?.image = UIImage(named: "PHOTO")
         cell.imageView?.contentMode = .scaleAspectFit
+        cell.imageView?.moa.url = evento.FotoURL
         
         return cell
     }

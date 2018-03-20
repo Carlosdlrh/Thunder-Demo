@@ -8,12 +8,14 @@
 
 import UIKit
 import Firebase
+import moa
 
 class MiEventoViewController: UIViewController {
     
     var Eventos = Even()
     
     @IBOutlet weak var nombreEvento: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

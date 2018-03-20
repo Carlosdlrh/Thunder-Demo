@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import moa
 
 class ExplorarEventoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -87,6 +88,12 @@ class ExplorarEventoViewController: UIViewController, UITableViewDataSource, UIT
         let evento = Eventos[indexPath.row]
         //Que aparescan solo los nombres en la tabla
         cell.textLabel?.text = evento.EveNom
+        
+        //Ver imagen del Evento en la lista
+        cell.imageView?.image = UIImage(named: "PHOTO")
+        cell.imageView?.contentMode = .scaleAspectFit
+        cell.imageView?.moa.url = evento.FotoURL
+        
         return cell
     }
     
