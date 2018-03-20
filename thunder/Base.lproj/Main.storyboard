@@ -195,18 +195,10 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TOV-2o-0bl">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1382"/>
                                         <subviews>
-                                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PHOTO" translatesAutoresizingMaskIntoConstraints="NO" id="FXP-e3-iW8">
-                                                <rect key="frame" x="75" y="26" width="225" height="235"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Track day Evento" translatesAutoresizingMaskIntoConstraints="NO" id="XKe-Sg-LVt">
+                                                <rect key="frame" x="0.0" y="53" width="375" height="225"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Seleciona Foto" textAlignment="center" minimumFontSize="17" background="Label BG 1" translatesAutoresizingMaskIntoConstraints="NO" id="bJp-Qh-Z0j">
-                                                <rect key="frame" x="75" y="276" width="225" height="48"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="username"/>
-                                            </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nombre del Evento" textAlignment="center" minimumFontSize="17" background="Label BG 1" translatesAutoresizingMaskIntoConstraints="NO" id="h6D-Pw-oem">
                                                 <rect key="frame" x="62" y="491" width="256" height="48"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -219,33 +211,13 @@
                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="username"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="miw-mB-Eha">
-                                                <rect key="frame" x="36" y="1079" width="302" height="48"/>
+                                                <rect key="frame" x="62" y="1121" width="256" height="48"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Crear" backgroundImage="Crear Botón BG">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="crearBoton:" destination="tb4-R7-Z2C" eventType="touchUpInside" id="yz8-6M-o8S"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHd-t8-aBV">
-                                                <rect key="frame" x="36" y="1142" width="302" height="48"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <accessibility key="accessibilityConfiguration">
-                                                    <bool key="isElement" value="NO"/>
-                                                </accessibility>
-                                                <state key="normal" title="Guardar" backgroundImage="Guardad Botón BG">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBP-fB-j5e">
-                                                <rect key="frame" x="36" y="1205" width="302" height="48"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Cancelar" backgroundImage="Cancelar Botón BG">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="cancelarBoton:" destination="tb4-R7-Z2C" eventType="touchUpInside" id="nUd-EJ-Ky1"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lugar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IP6-p2-2k1">
@@ -262,7 +234,7 @@
                                                 <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nombre del Evento" textAlignment="center" minimumFontSize="17" background="Label BG 1" translatesAutoresizingMaskIntoConstraints="NO" id="TYK-R5-d03">
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nombre del Evento" textAlignment="center" minimumFontSize="17" background="Label BG 1" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="TYK-R5-d03">
                                                 <rect key="frame" x="62" y="387" width="256" height="48"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -357,6 +329,27 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="username"/>
                                             </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSX-3J-7QI">
+                                                <rect key="frame" x="62" y="256" width="256" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Seleccionar" backgroundImage="SING RECTANGLE">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="accessTapped:" destination="DVf-nh-OZE" eventType="touchUpInside" id="UjD-KH-sYI"/>
+                                                    <action selector="cameraTapped:" destination="tb4-R7-Z2C" eventType="touchUpInside" id="mX5-mG-YPB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBP-fB-j5e">
+                                                <rect key="frame" x="62" y="1200" width="256" height="48"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Cancelar" backgroundImage="Cancelar Botón BG">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cancelarBoton:" destination="tb4-R7-Z2C" eventType="touchUpInside" id="h8F-9a-JNn"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.037321366369724274" green="0.19329458475112915" blue="0.43026146292686462" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -384,13 +377,15 @@
                     </view>
                     <size key="freeformSize" width="375" height="1450"/>
                     <connections>
+                        <outlet property="crearBoton" destination="miw-mB-Eha" id="6Jd-f4-bYu"/>
+                        <outlet property="imageView" destination="XKe-Sg-LVt" id="h4g-Yh-myY"/>
                         <outlet property="nombreEventoTextField" destination="TYK-R5-d03" id="oBl-n6-U8Q"/>
                         <segue destination="LJp-q6-QCB" kind="show" identifier="creado" id="ZeU-fl-xTs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SEm-jW-0M9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2738" y="-1182"/>
+            <point key="canvasLocation" x="2736.8000000000002" y="-1182.2660098522167"/>
         </scene>
         <!--Evento Inscrito View Controller-->
         <scene sceneID="5pq-8d-TXd">
@@ -1384,7 +1379,6 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
         <image name="Crear Botón BG" width="255" height="48"/>
         <image name="Eventos Bar BG" width="378" height="67"/>
         <image name="Explorar" width="33" height="35"/>
-        <image name="Guardad Botón BG" width="255" height="48"/>
         <image name="Label BG 1" width="255" height="48"/>
         <image name="Logo" width="105" height="176"/>
         <image name="Member tag" width="164" height="45"/>
@@ -1404,6 +1398,6 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
         <segue reference="Gur-iB-2dB"/>
         <segue reference="c8B-L0-5VF"/>
         <segue reference="7sD-Zs-7Sz"/>
-        <segue reference="L0M-7v-l1c"/>
+        <segue reference="ZeU-fl-xTs"/>
     </inferredMetricsTieBreakers>
 </document>

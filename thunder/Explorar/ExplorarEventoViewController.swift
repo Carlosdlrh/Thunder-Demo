@@ -45,10 +45,14 @@ class ExplorarEventoViewController: UIViewController, UITableViewDataSource, UIT
             
             snap.EveNom = eventoDir["Nombre"] as! String
             snap.Eveuid = snapshot.key
+            snap.FotoURL = eventoDir["Imagen"] as! String
+            snap.Creadoruid = eventoDir["CreadorID"] as! String
             
             //---- Test de immprenta
             print(snap.Eveuid)
             print(snap.EveNom)
+            print(snap.FotoURL)
+            print(snap.Creadoruid)
             
             self.Eventos.append(snap)
             self.tableView.reloadData()
@@ -64,6 +68,7 @@ class ExplorarEventoViewController: UIViewController, UITableViewDataSource, UIT
     @IBAction func mundoBoton(_ sender: Any) {
         performSegue(withIdentifier: "mundoEventos", sender: nil)
     }
+    
     //Preparar el Envio--------------------------
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "explorarEvento"{
@@ -80,9 +85,8 @@ class ExplorarEventoViewController: UIViewController, UITableViewDataSource, UIT
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         let evento = Eventos[indexPath.row]
-        
+        //Que aparescan solo los nombres en la tabla
         cell.textLabel?.text = evento.EveNom
-        
         return cell
     }
     

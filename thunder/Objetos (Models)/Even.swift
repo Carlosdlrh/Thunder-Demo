@@ -14,5 +14,8 @@ class Even{
     var Eveuid = ""
     //Nombre
     var EveNom = ""
-    
+    //Creador del Evento
+    var Creadoruid = ""
+    //Foto
+    var FotoURL = ""
 }

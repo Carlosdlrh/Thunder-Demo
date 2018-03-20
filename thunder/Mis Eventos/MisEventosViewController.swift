@@ -36,7 +36,6 @@ class MisEventosViewController: UIViewController, UITableViewDataSource, UITable
         //Conectandome directamente con la lista de Eventos Creados por el usuario
         let ref = Database.database().reference().child("Eventos").child("Eventos Generales")
         
-        
         //Cuando un Child es agregado al identificador de Eventos se puede acceder directamente a el con solo mensionarlo como clave
         ref.observe(DataEventType.childAdded, with: { snapshot in
             print(snapshot.value!)
@@ -53,20 +52,23 @@ class MisEventosViewController: UIViewController, UITableViewDataSource, UITable
             if comparacion1 == uidc{
                 snap.EveNom = eventoDir["Nombre"] as! String
                 snap.Eveuid = snapshot.key
+                snap.FotoURL = eventoDir["Imagen"] as! String
+                snap.Creadoruid = eventoDir["CreadorID"] as! String
                 
                 //---- Test de immprenta
                 print(snap.Eveuid)
                 print(snap.EveNom)
+                print(snap.FotoURL)
+                print(snap.Creadoruid)
                 
                 self.Eventos.append(snap)
                 self.tableView.reloadData()
+                
             }else{
                 print("Error")
             }
         })
     }
-    
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Eventos.count
@@ -75,7 +77,7 @@ class MisEventosViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         let evento = Eventos[indexPath.row]
-        
+        //Que aparescan solo los nombres en la tabla
         cell.textLabel?.text = evento.EveNom
         
         return cell
