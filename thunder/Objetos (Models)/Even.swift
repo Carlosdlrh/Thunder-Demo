@@ -18,4 +18,6 @@ class Even{
     var Creadoruid = ""
     //Foto
     var FotoURL = ""
+    //Foto
+    var InscritoId = ""
 }

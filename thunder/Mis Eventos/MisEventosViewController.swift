@@ -86,8 +86,13 @@ class MisEventosViewController: UIViewController, UITableViewDataSource, UITable
         cell.imageView?.contentMode = .scaleAspectFit
         cell.imageView?.moa.url = evento.FotoURL
         
+        self.tableView.rowHeight = UITableViewAutomaticDimension;
+        self.tableView.estimatedRowHeight = 44.0;
+        
+        
         return cell
     }
+    
     //Selecionar Evento
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let evento = Eventos[indexPath.row]
@@ -107,9 +112,4 @@ class MisEventosViewController: UIViewController, UITableViewDataSource, UITable
         performSegue(withIdentifier: "crearEvento", sender: nil)
     }
     
-    @IBAction func eventoBoton(_ sender: Any) {
-        performSegue(withIdentifier: "miEvento", sender: nil)
-    }
-    
-    }
-
+}

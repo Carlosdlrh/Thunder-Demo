@@ -112,12 +112,6 @@ class CrearMiEventoViewController: UIViewController, UIImagePickerControllerDele
         self.view.endEditing(true)
     }
     
-    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //Tomar todo lo ya escrito y enviarlo a la pantalla de evento
-        //let nextVC = segue.destination as! MiEventoViewController
-        //nextVC.Eventos = sender as! Even
-
-    }*/
     
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

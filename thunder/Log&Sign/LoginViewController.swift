@@ -33,7 +33,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     if error != nil{
                         print("Error: \(String(describing: error))")
                     }else{
-                        print("¡Usuario creado con exito!")
+                        
                         //Quary para conectarse y cargar usuario registrado a base de datos
                         let ref = Database.database().reference().child("Usuarios").child(user!.uid)
                         //Libreria directa de incrucion de objetos
@@ -41,6 +41,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         
                         ref.setValue(her)
                         
+                        print("¡Usuario creado con exito!")
                         print("Bienbenido:\(String(describing: user))")
                         self.performSegue(withIdentifier: "login", sender: nil)
                     }

@@ -78,6 +78,7 @@ class ExplorarEventoViewController: UIViewController, UITableViewDataSource, UIT
         }
         
     }
+    
     //Funciones de la tabla----------------------
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Eventos.count
