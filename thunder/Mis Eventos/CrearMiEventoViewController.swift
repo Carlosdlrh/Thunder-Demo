@@ -9,6 +9,18 @@
 import UIKit
 import Firebase
 
+extension UIDatePicker {
+    var textColor: UIColor? {
+        set {
+            setValue(newValue, forKeyPath: "textColor")
+        }
+        get {
+            return value(forKeyPath: "textColor") as? UIColor
+        }
+    }
+}
+
+
 class CrearMiEventoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
     var Eventos = Even()
@@ -22,10 +34,12 @@ class CrearMiEventoViewController: UIViewController, UIImagePickerControllerDele
     
     @IBOutlet weak var crearBoton: UIButton!
     
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        datePicker.textColor = .white
         imagePicker.delegate = self
     }
     

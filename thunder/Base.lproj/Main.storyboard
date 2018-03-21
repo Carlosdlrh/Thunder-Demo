@@ -196,97 +196,62 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1382"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Track day Evento" translatesAutoresizingMaskIntoConstraints="NO" id="XKe-Sg-LVt">
-                                                <rect key="frame" x="0.0" y="53" width="375" height="225"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nombre del Evento" textAlignment="center" minimumFontSize="17" background="Label BG 1" translatesAutoresizingMaskIntoConstraints="NO" id="h6D-Pw-oem">
-                                                <rect key="frame" x="62" y="491" width="256" height="48"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <accessibility key="accessibilityConfiguration">
-                                                    <bool key="isElement" value="NO"/>
-                                                </accessibility>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="username"/>
-                                            </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="miw-mB-Eha">
-                                                <rect key="frame" x="62" y="1121" width="256" height="48"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Crear" backgroundImage="Crear Botón BG">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="crearBoton:" destination="tb4-R7-Z2C" eventType="touchUpInside" id="yz8-6M-o8S"/>
-                                                </connections>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lugar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IP6-p2-2k1">
-                                                <rect key="frame" x="57" y="443" width="67" height="33"/>
+                                                <rect key="frame" x="49" y="381" width="67" height="33"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                 <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvi-Wa-YTn">
+                                                <rect key="frame" x="54" y="429" width="256" height="48"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Selecionar" backgroundImage="Label BG 1">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre del Evento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qy9-vZ-Lwg">
-                                                <rect key="frame" x="57" y="339" width="221" height="33"/>
+                                                <rect key="frame" x="49" y="277" width="221" height="33"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                 <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nombre del Evento" textAlignment="center" minimumFontSize="17" background="Label BG 1" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="TYK-R5-d03">
-                                                <rect key="frame" x="62" y="387" width="256" height="48"/>
+                                                <rect key="frame" x="54" y="325" width="256" height="48"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="username"/>
-                                            </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ciudad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtU-xO-aEh">
-                                                <rect key="frame" x="57" y="547" width="84" height="33"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                                <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Seleciona Ciudad" textAlignment="center" minimumFontSize="17" background="Label BG 1" translatesAutoresizingMaskIntoConstraints="NO" id="NX2-nC-l9Q">
-                                                <rect key="frame" x="62" y="595" width="256" height="48"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <accessibility key="accessibilityConfiguration">
-                                                    <bool key="isElement" value="NO"/>
-                                                </accessibility>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="username"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fecha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCc-kY-qq4">
-                                                <rect key="frame" x="57" y="651" width="71" height="33"/>
+                                                <rect key="frame" x="49" y="483" width="71" height="33"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                 <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Seleciona la fecha" textAlignment="center" minimumFontSize="17" background="Label BG 1" translatesAutoresizingMaskIntoConstraints="NO" id="y4M-Ur-oQl">
-                                                <rect key="frame" x="62" y="699" width="256" height="48"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="y2X-za-qhY">
+                                                <rect key="frame" x="-8" y="508" width="375" height="162"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <accessibility key="accessibilityConfiguration">
-                                                    <bool key="isElement" value="NO"/>
-                                                </accessibility>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="username"/>
-                                            </textField>
+                                                <date key="date" timeIntervalSinceReferenceDate="543304030.91667199">
+                                                    <!--2018-03-21 05:47:10 +0000-->
+                                                </date>
+                                            </datePicker>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Brackets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ond-nJ-cKX">
-                                                <rect key="frame" x="57" y="755" width="102" height="33"/>
+                                                <rect key="frame" x="49" y="656" width="102" height="33"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                 <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Seleciona el tipo de brakets" textAlignment="center" minimumFontSize="17" background="Label BG 1" translatesAutoresizingMaskIntoConstraints="NO" id="2KR-2z-aeu">
-                                                <rect key="frame" x="62" y="803" width="256" height="48"/>
+                                                <rect key="frame" x="54" y="704" width="256" height="48"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration">
@@ -297,29 +262,29 @@
                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="username"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Costo de Entradas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSY-CS-6hb">
-                                                <rect key="frame" x="57" y="859" width="214" height="33"/>
+                                                <rect key="frame" x="49" y="760" width="214" height="33"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                 <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Escribe el monto en numero" textAlignment="center" minimumFontSize="17" background="Label BG 1" translatesAutoresizingMaskIntoConstraints="NO" id="lrG-p1-ZgI">
-                                                <rect key="frame" x="62" y="907" width="256" height="48"/>
+                                                <rect key="frame" x="54" y="808" width="256" height="48"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="username"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cobro en Thunder*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohg-xz-w5f">
-                                                <rect key="frame" x="57" y="963" width="222" height="33"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reglamento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohg-xz-w5f">
+                                                <rect key="frame" x="49" y="864" width="140" height="33"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                 <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Activar" textAlignment="center" minimumFontSize="17" background="Label BG 1" translatesAutoresizingMaskIntoConstraints="NO" id="eKR-3p-zUn">
-                                                <rect key="frame" x="62" y="1011" width="256" height="48"/>
+                                                <rect key="frame" x="54" y="912" width="256" height="48"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration">
@@ -330,7 +295,7 @@
                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="username"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSX-3J-7QI">
-                                                <rect key="frame" x="62" y="256" width="256" height="44"/>
+                                                <rect key="frame" x="62" y="203" width="256" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Seleccionar" backgroundImage="SING RECTANGLE">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -340,14 +305,42 @@
                                                     <action selector="cameraTapped:" destination="tb4-R7-Z2C" eventType="touchUpInside" id="mX5-mG-YPB"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cobro en Thunder*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uax-x4-w5a">
+                                                <rect key="frame" x="49" y="968" width="222" height="33"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                                <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Activar" textAlignment="center" minimumFontSize="17" background="Label BG 1" translatesAutoresizingMaskIntoConstraints="NO" id="1BR-2l-UBa">
+                                                <rect key="frame" x="54" y="1016" width="256" height="48"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <bool key="isElement" value="NO"/>
+                                                </accessibility>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="username"/>
+                                            </textField>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBP-fB-j5e">
-                                                <rect key="frame" x="62" y="1200" width="256" height="48"/>
+                                                <rect key="frame" x="62" y="1208" width="256" height="48"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Cancelar" backgroundImage="Cancelar Botón BG">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="cancelarBoton:" destination="tb4-R7-Z2C" eventType="touchUpInside" id="h8F-9a-JNn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="miw-mB-Eha">
+                                                <rect key="frame" x="62" y="1140" width="256" height="48"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Crear" backgroundImage="Crear Botón BG">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="crearBoton:" destination="tb4-R7-Z2C" eventType="touchUpInside" id="yz8-6M-o8S"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -378,6 +371,7 @@
                     <size key="freeformSize" width="375" height="1450"/>
                     <connections>
                         <outlet property="crearBoton" destination="miw-mB-Eha" id="6Jd-f4-bYu"/>
+                        <outlet property="datePicker" destination="y2X-za-qhY" id="6cT-PL-wvr"/>
                         <outlet property="imageView" destination="XKe-Sg-LVt" id="h4g-Yh-myY"/>
                         <outlet property="nombreEventoTextField" destination="TYK-R5-d03" id="oBl-n6-U8Q"/>
                         <segue destination="LJp-q6-QCB" kind="show" identifier="creado" id="ZeU-fl-xTs"/>
@@ -532,7 +526,7 @@
                         <segue destination="mdL-ph-Xdp" kind="show" identifier="miReglamento" id="0RZ-hy-yi1"/>
                         <segue destination="suz-YQ-C0E" kind="show" identifier="lugarEventoInscrito" id="Lkx-pN-wDO"/>
                         <segue destination="m0O-Nn-cun" kind="show" identifier="participantesEventoInscrito" id="bHY-ca-1RC"/>
-                        <segue destination="l5q-Vw-gHQ" kind="show" identifier="mensajeEventoInscrito" id="HdG-sL-TzW"/>
+                        <segue destination="6tv-gw-7gR" kind="show" identifier="mensajeEventoInscrito" id="5HF-Og-N3j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uZf-eC-i47" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -816,7 +810,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9jy-3W-zfH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4488.8000000000002" y="-1417.2413793103449"/>
+            <point key="canvasLocation" x="4273" y="-1417"/>
         </scene>
         <!--Reglamento General-->
         <scene sceneID="xh9-iq-kC8">
@@ -827,7 +821,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="35" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TgD-XA-iws">
-                                <rect key="frame" x="37" y="115" width="301" height="456"/>
+                                <rect key="frame" x="37" y="178" width="301" height="456"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a tellus vulputate, tincidunt elit non, aliquam libero. Integer bibendum felis tellus, at ultrices leo pulvinar eu. Vestibulum accumsan, magna at mattis malesuada, lectus enim dictum nibh, ut ultrices dui mauris eget ipsum. Ut viverra nisi ac tortor bibendum lacinia. Praesent magna ligula, ullamcorper condimentum ullamcorper id, eleifend non ipsum. Curabitur eget luctus leo. Pellentesque nec nulla varius, condimentum felis et, vehicula libero. Pellentesque tincidunt lectus eget feugiat venenatis. Vestibulum hendrerit condimentum pretium. Quisque in vestibulum nisl. Aenean pretium eros dolor, sit amet feugiat nunc feugiat a. Praesent elit purus, tristique eget dictum quis, facilisis vel ex. Integer a blandit augue. Mauris congue nisi ante, in finibus tortor posuere sit amet.
 
@@ -843,7 +837,7 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ea2-hb-hbm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5126" y="-114"/>
+            <point key="canvasLocation" x="5125.6000000000004" y="-114.53201970443351"/>
         </scene>
         <!--Explorar Eventos-->
         <scene sceneID="AuU-nQ-Oba">
@@ -916,13 +910,13 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
         <!--Lugar-->
         <scene sceneID="wCq-n4-kBU">
             <objects>
-                <viewController title="Lugar" id="suz-YQ-C0E" sceneMemberID="viewController">
+                <viewController title="Lugar" id="suz-YQ-C0E" customClass="MapViewController" customModule="thunder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sZe-q3-w1X">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="w1f-LC-Wzf">
-                                <rect key="frame" x="0.0" y="156" width="375" height="453"/>
+                                <rect key="frame" x="0.0" y="165" width="375" height="384"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="6" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Hj0-0W-oLJ">
@@ -933,28 +927,46 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tecnológico de Monterrey" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPa-Kg-bph">
-                                <rect key="frame" x="44" y="105" width="287" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haa-mN-sqG">
-                                <rect key="frame" x="45" y="544" width="302" height="45"/>
+                                <rect key="frame" x="39" y="572" width="308" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Llevame" backgroundImage="Rectangle 4">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tecnológico de Monterrey" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPa-Kg-bph">
+                                <rect key="frame" x="44" y="111" width="287" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.043137254899999998" green="0.1333333333" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="CHA-ed-5dk"/>
                     </view>
+                    <connections>
+                        <outlet property="Map" destination="w1f-LC-Wzf" id="I4D-0z-6bC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aOo-mV-cP6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6892" y="390"/>
+            <point key="canvasLocation" x="6892" y="389.40886699507394"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Cih-Pq-7Ef">
+            <objects>
+                <viewController id="6tv-gw-7gR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zvb-7y-ENw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="JpA-jg-efc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KeB-et-zqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4273" y="-305"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="xn3-lb-5xn">
@@ -986,7 +998,7 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cAF-Ae-uNc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4405.6000000000004" y="-372.41379310344831"/>
+            <point key="canvasLocation" x="5969" y="-1417"/>
         </scene>
         <!--Inscrito-->
         <scene sceneID="604-aW-aPa">
@@ -1280,7 +1292,7 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
                         <segue destination="mdL-ph-Xdp" kind="show" identifier="eventoReglamento" id="Blf-Uc-G0o"/>
                         <segue destination="suz-YQ-C0E" kind="show" identifier="eventoLugar" id="LNa-su-DhX"/>
                         <segue destination="m0O-Nn-cun" kind="show" identifier="eventoParticipantes" id="m9c-Qf-aYu"/>
-                        <segue destination="l5q-Vw-gHQ" kind="show" identifier="mensajeEvento" id="rwf-gb-xDa"/>
+                        <segue destination="6tv-gw-7gR" kind="show" identifier="mensajeEvento" id="Q3T-fY-Scp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ro3-L0-FbS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1343,7 +1355,7 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ubf-As-UTU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5420" y="-1417"/>
+            <point key="canvasLocation" x="5126" y="-1417"/>
         </scene>
         <!--Participantes-->
         <scene sceneID="v77-ZO-b6W">
@@ -1397,7 +1409,7 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="1PW-I4-35F"/>
-        <segue reference="Gur-iB-2dB"/>
+        <segue reference="Q3T-fY-Scp"/>
         <segue reference="c8B-L0-5VF"/>
         <segue reference="7sD-Zs-7Sz"/>
         <segue reference="ZeU-fl-xTs"/>

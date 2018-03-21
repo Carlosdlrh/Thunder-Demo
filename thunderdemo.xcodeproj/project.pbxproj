@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		71D79E95EF6D19F66D134512 /* Pods_thunder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A21EB600483457B5C81E78B /* Pods_thunder.framework */; };
+		817FEA252061CA910096FB03 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817FEA242061CA910096FB03 /* MapViewController.swift */; };
+		817FEA272062466C0096FB03 /* ChatLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817FEA262062466C0096FB03 /* ChatLogViewController.swift */; };
 		818AA568205527560046CD50 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818AA567205527560046CD50 /* LoginViewController.swift */; };
 		818AA56A2056293F0046CD50 /* MisEventosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818AA5692056293F0046CD50 /* MisEventosViewController.swift */; };
 		818AA56D205638670046CD50 /* MiEventoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818AA56C205638670046CD50 /* MiEventoViewController.swift */; };
@@ -28,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		3F787B91440F09289DEC16C0 /* Pods-thunder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thunder.release.xcconfig"; path = "Pods/Target Support Files/Pods-thunder/Pods-thunder.release.xcconfig"; sourceTree = "<group>"; };
+		817FEA242061CA910096FB03 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		817FEA262062466C0096FB03 /* ChatLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogViewController.swift; sourceTree = "<group>"; };
 		818AA567205527560046CD50 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		818AA5692056293F0046CD50 /* MisEventosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisEventosViewController.swift; sourceTree = "<group>"; };
 		818AA56C205638670046CD50 /* MiEventoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiEventoViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +84,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		817FEA232061CA770096FB03 /* Dentro de Evento */ = {
+			isa = PBXGroup;
+			children = (
+				817FEA242061CA910096FB03 /* MapViewController.swift */,
+			);
+			path = "Dentro de Evento";
+			sourceTree = "<group>";
+		};
 		818AA56B205629530046CD50 /* Mis Eventos */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +131,7 @@
 		81B340A3205A4E7900187CF7 /* Objetos (Models) */ = {
 			isa = PBXGroup;
 			children = (
+				817FEA262062466C0096FB03 /* ChatLogViewController.swift */,
 				81B340A4205A4E9F00187CF7 /* Even.swift */,
 			);
 			path = "Objetos (Models)";
@@ -153,6 +166,7 @@
 		81BE502A2054DBA500C4ADFA /* thunder */ = {
 			isa = PBXGroup;
 			children = (
+				817FEA232061CA770096FB03 /* Dentro de Evento */,
 				81B340A8205A54AF00187CF7 /* Log&Sign */,
 				81B340A3205A4E7900187CF7 /* Objetos (Models) */,
 				81B340A2205A4BFC00187CF7 /* thunder.entitlements */,
@@ -270,16 +284,20 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-thunder/Pods-thunder-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Cards/Cards.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Player/Player.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/moa/moa.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cards.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Player.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/moa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -319,7 +337,9 @@
 				818AA56F2056406C0046CD50 /* MiPerfilViewController.swift in Sources */,
 				818AA57A2056F33E0046CD50 /* ExplorarEventoViewController.swift in Sources */,
 				818AA568205527560046CD50 /* LoginViewController.swift in Sources */,
+				817FEA272062466C0096FB03 /* ChatLogViewController.swift in Sources */,
 				818AA573205644D40046CD50 /* EventosInscritoViewController.swift in Sources */,
+				817FEA252061CA910096FB03 /* MapViewController.swift in Sources */,
 				818AA56A2056293F0046CD50 /* MisEventosViewController.swift in Sources */,
 				81B340A5205A4E9F00187CF7 /* Even.swift in Sources */,
 				818AA57820564E1D0046CD50 /* EventoViewController.swift in Sources */,
