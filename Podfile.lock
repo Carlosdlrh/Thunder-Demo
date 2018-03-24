@@ -45,6 +45,7 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.3)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.3)
   - GTMSessionFetcher/Core (1.1.14)
+  - IQKeyboardManagerSwift (5.0.8)
   - leveldb-library (1.20)
   - moa (8.0.4)
   - nanopb (0.3.8):
@@ -59,6 +60,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - IQKeyboardManagerSwift
   - moa (from `https://github.com/evgenyneu/moa.git`, branch `swift-4.0`)
 
 EXTERNAL SOURCES:
@@ -81,10 +83,11 @@ SPEC CHECKSUMS:
   FirebaseStorage: 9a863a2bb96c406958eeff7c2f1dfa9f44c44a13
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   GTMSessionFetcher: 390ea358e5a0d0133153806f744662dad933d06b
+  IQKeyboardManagerSwift: 2e7dc7f98c111458c1ea2b373f893e8cf95e2b97
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   moa: 48cda4d9e7ef141ac72999f1e15dce1fee1f1365
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
 
-PODFILE CHECKSUM: efa39f6c7a5056465b54687c9907d13b11a6dac5
+PODFILE CHECKSUM: d8ff3fe157ad842fafd99c6d4c6f25a1955b63d4
 
 COCOAPODS: 1.4.0
