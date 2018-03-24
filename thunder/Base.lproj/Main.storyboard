@@ -499,6 +499,8 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="1bN-hO-X10"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="imageView" destination="fmm-CN-ENS" id="zTh-uh-7ya"/>
+                        <outlet property="nombreEvento" destination="UTE-hy-J7K" id="l65-cc-bes"/>
                         <segue destination="mdL-ph-Xdp" kind="show" identifier="miReglamento" id="0RZ-hy-yi1"/>
                         <segue destination="suz-YQ-C0E" kind="show" identifier="lugarEventoInscrito" id="Lkx-pN-wDO"/>
                         <segue destination="m0O-Nn-cun" kind="show" identifier="participantesEventoInscrito" id="bHY-ca-1RC"/>
@@ -1383,9 +1385,9 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
         <image name="mis Eventos ICON" width="30" height="21"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="m9c-Qf-aYu"/>
-        <segue reference="Q3T-fY-Scp"/>
-        <segue reference="LNa-su-DhX"/>
-        <segue reference="Blf-Uc-G0o"/>
+        <segue reference="bHY-ca-1RC"/>
+        <segue reference="5HF-Og-N3j"/>
+        <segue reference="Lkx-pN-wDO"/>
+        <segue reference="0RZ-hy-yi1"/>
     </inferredMetricsTieBreakers>
 </document>

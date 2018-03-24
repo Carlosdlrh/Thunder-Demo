@@ -30,22 +30,57 @@ class EventosInscritoViewController: UIViewController, UITableViewDataSource, UI
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
-        //Crear Conexion
-        //Buscar todos los eventos creados
-        let ref = Database.database().reference().child("Usuarios").childByAutoId()
+        //Buscar todos mis eventos creados
+        print("Revisando tus eventos Inscrito...")
+        //Conectandome directamente con la lista de Eventos Creados por el usuario
+        //-------
         
-        ref.child("Eventos").observe(.value, with: { snapshot in
-            print(snapshot.value!)
-            /*let snap = Even()
-            snap.EveNom = snapshot.value(forKeyPath: "MiEvento") as! String
-            print(snap.Eveuid)*/
-        })
-        
-    }
-    
-    
-    @IBAction func eventoBoton(_ sender: Any) {
-        performSegue(withIdentifier: "eventoInscrito", sender: nil)
+        //Objetos a Comparar
+        let uid = Database.database().reference().child("Usuarios").child(Auth.auth().currentUser!.uid).child("Eventos Inscrito")
+        uid.observe(DataEventType.childAdded, with: { snaps in
+            print(snaps.value!)
+            
+            let usr = snaps.value as! [String: Any]
+            let uidc = usr["EventoID"] as! String
+            print("Usuario Inscrito a")
+            print(uidc)
+            
+            let ref = Database.database().reference().child("Eventos").child("Eventos Generales")
+            ref.observe(DataEventType.childAdded, with: { snapshot in
+                print("Eventos Todos")
+                print(snapshot.value!)
+                print(ref.key)
+                
+                let eventoDir = snapshot.value as! [String: Any]
+                let comparacion = eventoDir["EventoID"] as! String
+                
+            //Comparación
+            if comparacion == uidc{
+                let snap = Even()
+                
+                    print("Sí hay eventos")
+                
+                    let eventoDir = snapshot.value as! [String: Any]
+                
+                    snap.EveNom = eventoDir["Nombre"] as! String
+                    snap.Eveuid = snapshot.key
+                    snap.FotoURL = eventoDir["Imagen"] as! String
+                    snap.Creadoruid = eventoDir["CreadorID"] as! String
+                
+                    //---- Test de immprenta
+                    print(snap.Eveuid)
+                    print(snap.EveNom)
+                    print(snap.FotoURL)
+                    print(snap.Creadoruid)
+                
+                    self.Eventos.append(snap)
+                    self.tableView.reloadData()
+                
+                }else{
+                    print("Error")
+                }
+                })
+            })
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,10 +89,34 @@ class EventosInscritoViewController: UIViewController, UITableViewDataSource, UI
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
+        let evento = Eventos[indexPath.row]
+        //Que aparescan solo los nombres en la tabla
+        cell.textLabel?.text = evento.EveNom
         
-        //let Event = Eventos[indexPath.row]
-        //cell.textLabel?.text = Event.email
+        //Ver imagen del Evento en la lista
+        cell.imageView?.image = UIImage(named: "PHOTO")
+        cell.imageView?.contentMode = .scaleAspectFit
+        cell.imageView?.moa.url = evento.FotoURL
+        
+        self.tableView.rowHeight = UITableViewAutomaticDimension;
+        self.tableView.estimatedRowHeight = 44.0;
         
         return cell
     }
+    
+    //Selecionar Evento
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let evento = Eventos[indexPath.row]
+        performSegue(withIdentifier: "eventoInscrito", sender: evento)
+        
+    }
+    //Preparar para el Envio
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "eventoInscrito"{
+            let nextVC = segue.destination as! EventoInscritoViewController
+            nextVC.Eventos = sender as! Even
+        }
+        
+    }
+    
 }

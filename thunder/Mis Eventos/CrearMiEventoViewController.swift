@@ -79,6 +79,7 @@ class CrearMiEventoViewController: UIViewController, UIImagePickerControllerDele
             }else{
                 //Imprimir donde están las imagenes
                 let URLdeImagen = metadata?.downloadURL as Any
+                print("Imagen URL")
                 print(URLdeImagen)
             }
             
@@ -90,11 +91,15 @@ class CrearMiEventoViewController: UIViewController, UIImagePickerControllerDele
             let creador = ref1.key
             print(creador)
             
-            let her = ["CreadorID":creador, "Nombre":self.nombreEventoTextField!.text!, "Inscritos": "0", "Mensajes":"0", "Imagen":URLdeImagen] as [String : Any]
+            
             
             //Conexion y guardar todo en base de datos
             //Guardar el Id del Evento en el usuario
             let ref = Database.database().reference().child("Eventos").child("Eventos Generales").childByAutoId()
+            let EveID = ref.key
+            
+            let her = ["EventoID":EveID,"CreadorID":creador, "Nombre":self.nombreEventoTextField!.text!, "Inscritos": "0", "Imagen":URLdeImagen] as [String : Any]
+            
             ref.setValue(her)
             
             //Si todo sale bien hacemos el segue
@@ -111,8 +116,6 @@ class CrearMiEventoViewController: UIViewController, UIImagePickerControllerDele
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {//Controles para quitar el teclado de la pantalla
         self.view.endEditing(true)
     }
-    
-    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == nombreEventoTextField {

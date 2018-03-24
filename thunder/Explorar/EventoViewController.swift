@@ -50,7 +50,7 @@ class EventoViewController: UIViewController {
             let uidc = uid.key
             
             let eventoDir = snapshot.value as! [String: Any]
-            let comparacion1 = eventoDir["Nombre"] as! String
+            let comparacion1 = eventoDir["UsuarioID"] as! String
             
             //Comparación
             if comparacion1 == uidc{
@@ -67,17 +67,23 @@ class EventoViewController: UIViewController {
     @IBAction func inscribirseBoton(_ sender: Any) {
         
         //Buscar todos mis eventos creados
-        print("Revisando tus eventos creados...")
-        //Conectandome directamente con la lista de Eventos Creados por el usuario
+        print("Revisando eventos creados...")
+        //Conectandome directamente con la lista de Eventos Creados
         let ref = Database.database().reference().child("Eventos").child("Eventos Generales").child(Eventos.Eveuid).child("Inscritos").childByAutoId()
+        
+        //Conectandose con el usuario
         let ref1 = Database.database().reference().child("Usuarios").child(Auth.auth().currentUser!.uid)
         let user = ref1.key
         print(user)
-        let her = ["Nombre":user]
+        let her = ["UsuarioID":user]
         
         ref.setValue(her)
         
+        //refereiar el evento para que se guarde en la lsita de eventos inscritos del usuario
+        ref1.child("Eventos Inscrito").childByAutoId().child("EventoID").setValue(Eventos.Eveuid)
+        
         navigationController!.popToRootViewController(animated: true)
+        
     }
     
     @IBAction func salirBoton(_ sender: Any) {
