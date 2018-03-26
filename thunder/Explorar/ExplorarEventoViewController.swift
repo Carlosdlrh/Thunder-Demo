@@ -48,6 +48,7 @@ class ExplorarEventoViewController: UIViewController, UITableViewDataSource, UIT
             snap.Eveuid = snapshot.key
             snap.FotoURL = eventoDir["Imagen"] as! String
             snap.Creadoruid = eventoDir["CreadorID"] as! String
+            snap.costo = eventoDir["CostoEntradas"] as! String
             
             //---- Test de immprenta
             print(snap.Eveuid)

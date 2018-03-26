@@ -231,7 +231,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="y2X-za-qhY">
-                                                <rect key="frame" x="-8" y="508" width="375" height="162"/>
+                                                <rect key="frame" x="0.0" y="508" width="375" height="162"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <date key="date" timeIntervalSinceReferenceDate="543304030.91667199">
@@ -245,32 +245,21 @@
                                                 <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Escribe el monto en numero" textAlignment="center" minimumFontSize="17" background="Label BG 1" translatesAutoresizingMaskIntoConstraints="NO" id="lrG-p1-ZgI">
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" placeholder="Escribe el monto en numero" textAlignment="center" minimumFontSize="17" background="Label BG 1" translatesAutoresizingMaskIntoConstraints="NO" id="lrG-p1-ZgI">
                                                 <rect key="frame" x="54" y="726" width="256" height="48"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="username"/>
+                                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reglamento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohg-xz-w5f">
-                                                <rect key="frame" x="49" y="782" width="140" height="33"/>
+                                                <rect key="frame" x="49" y="792" width="140" height="33"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                 <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Activar" textAlignment="center" minimumFontSize="17" background="Label BG 1" translatesAutoresizingMaskIntoConstraints="NO" id="eKR-3p-zUn">
-                                                <rect key="frame" x="54" y="830" width="256" height="48"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <accessibility key="accessibilityConfiguration">
-                                                    <bool key="isElement" value="NO"/>
-                                                </accessibility>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="username"/>
-                                            </textField>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSX-3J-7QI">
                                                 <rect key="frame" x="62" y="203" width="256" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -302,24 +291,22 @@
                                                     <action selector="crearBoton:" destination="tb4-R7-Z2C" eventType="touchUpInside" id="yz8-6M-o8S"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cobro en Thunder*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uax-x4-w5a">
-                                                <rect key="frame" x="49" y="899" width="222" height="33"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pudes agregarlo más tarde" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZI9-ij-uSI">
+                                                <rect key="frame" x="49" y="833" width="261" height="33"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Activar" textAlignment="center" minimumFontSize="17" background="Label BG 1" translatesAutoresizingMaskIntoConstraints="NO" id="1BR-2l-UBa">
-                                                <rect key="frame" x="54" y="947" width="256" height="48"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uO6-rI-sJK">
+                                                <rect key="frame" x="0.0" y="885" width="375" height="202"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <accessibility key="accessibilityConfiguration">
-                                                    <bool key="isElement" value="NO"/>
-                                                </accessibility>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" red="0.036427799612283707" green="0.16634660959243774" blue="0.38255912065505981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="username"/>
-                                            </textField>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.037321366369724274" green="0.19329458475112915" blue="0.43026146292686462" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -347,6 +334,7 @@
                     </view>
                     <size key="freeformSize" width="375" height="1450"/>
                     <connections>
+                        <outlet property="costoEntradas" destination="lrG-p1-ZgI" id="ohy-UY-cIl"/>
                         <outlet property="crearBoton" destination="miw-mB-Eha" id="6Jd-f4-bYu"/>
                         <outlet property="datePicker" destination="y2X-za-qhY" id="6cT-PL-wvr"/>
                         <outlet property="imageView" destination="XKe-Sg-LVt" id="h4g-Yh-myY"/>
@@ -355,7 +343,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SEm-jW-0M9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3489" y="-1182"/>
+            <point key="canvasLocation" x="3488.8000000000002" y="-1182.2660098522167"/>
         </scene>
         <!--Evento Inscrito View Controller-->
         <scene sceneID="5pq-8d-TXd">
@@ -509,7 +497,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uZf-eC-i47" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2740" y="33"/>
+            <point key="canvasLocation" x="2740" y="34"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="XeB-YT-YPI">
@@ -695,13 +683,6 @@
                                 <rect key="frame" x="-2" y="472" width="379" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HjS-zy-Jws">
-                                <rect key="frame" x="171" y="482" width="32" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Costo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2f-n8-6xf">
                                 <rect key="frame" x="171" y="509" width="84" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -720,7 +701,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="800" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOY-Vg-fwf">
-                                <rect key="frame" x="30" y="483" width="32" height="21"/>
+                                <rect key="frame" x="30" y="483" width="84" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -771,12 +752,20 @@
                                 <color key="textColor" red="0.99194461107254028" green="0.99615627527236938" blue="0.99600595235824585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJX-6b-hAX">
+                                <rect key="frame" x="169" y="483" width="105" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.043137254899999998" green="0.1333333333" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="QCe-iQ-ziY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="kXP-Bl-cv3"/>
                     <connections>
+                        <outlet property="costoText" destination="RJX-6b-hAX" id="3zc-7y-g2E"/>
                         <outlet property="imageView" destination="5ai-s0-OSp" id="red-84-IeF"/>
                         <outlet property="nombreEvento" destination="hHX-ca-CFM" id="fMv-h0-Nbt"/>
                         <segue destination="mdL-ph-Xdp" kind="show" identifier="miReglamento" id="7sD-Zs-7Sz"/>
@@ -845,7 +834,6 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
                     <connections>
                         <outlet property="tableView" destination="Yar-hQ-NNi" id="Kz6-2c-MJL"/>
                         <segue destination="h1n-8X-XGr" kind="show" identifier="explorarEvento" id="mcs-eo-NGQ"/>
-                        <segue destination="zAd-KX-Ohk" kind="show" identifier="mundoEventos" id="rtc-xF-gBs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gdz-f4-9xk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -856,7 +844,7 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
         <scene sceneID="dhw-FC-Isv">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="idJ-J0-XIo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Mis Eventos" selectedImage="mis Eventos ICON" id="I5c-Lw-mLE"/>
+                    <tabBarItem key="tabBarItem" title="Mis Eventos" image="mis Eventos ICON" selectedImage="mis Eventos ICON" id="I5c-Lw-mLE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" shadowImage="Rectangle Shadow" id="EQS-cz-vJw">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -973,7 +961,7 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
         <scene sceneID="604-aW-aPa">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lxr-Kb-dv7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Inscrito" selectedImage="Explorar" id="IqF-Le-Elp"/>
+                    <tabBarItem key="tabBarItem" title="Inscrito" image="Explorar" selectedImage="Explorar" id="IqF-Le-Elp"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" shadowImage="Rectangle Shadow" id="ZRi-gT-4wa">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -997,7 +985,7 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
         <scene sceneID="pOr-oV-Y9U">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OKE-cw-MFp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Perfil" selectedImage="Perfil menú" id="cIQ-fz-9Qa"/>
+                    <tabBarItem key="tabBarItem" title="Perfil" image="Perfil menú" selectedImage="Perfil menú" id="cIQ-fz-9Qa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" shadowImage="Rectangle Shadow" id="pzF-FH-bdZ">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -1196,7 +1184,7 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="800" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9F6-Oc-Y1U">
-                                <rect key="frame" x="32" y="483" width="32" height="21"/>
+                                <rect key="frame" x="32" y="483" width="91" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1210,7 +1198,7 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkm-YG-vmz">
-                                <rect key="frame" x="163" y="480" width="32" height="21"/>
+                                <rect key="frame" x="163" y="480" width="106" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1259,6 +1247,7 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="e34-iK-Ys2"/>
                     <connections>
+                        <outlet property="costoText" destination="dkm-YG-vmz" id="jIh-le-Tgi"/>
                         <outlet property="imageView" destination="ZZm-2f-oYF" id="bz0-0T-xw7"/>
                         <outlet property="inscribirseBoton" destination="uGj-kr-Tk4" id="giT-D7-SuM"/>
                         <outlet property="nombreEvento" destination="xXh-6j-ogH" id="OUh-fi-C0V"/>
@@ -1271,35 +1260,7 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ro3-L0-FbS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2740" y="1087"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="zet-bI-UDf">
-            <objects>
-                <viewController id="zAd-KX-Ohk" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Irc-T7-nsr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="951-rU-27a">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="812" id="bKN-xL-bLL"/>
-                                </constraints>
-                            </mapView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.043137254899999998" green="0.1333333333" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="951-rU-27a" secondAttribute="trailing" id="6AB-Pf-wnj"/>
-                            <constraint firstItem="951-rU-27a" firstAttribute="leading" secondItem="Irc-T7-nsr" secondAttribute="leading" id="o3K-Jf-b3i"/>
-                            <constraint firstItem="951-rU-27a" firstAttribute="top" secondItem="Irc-T7-nsr" secondAttribute="top" id="yOy-0S-vp4"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="u43-da-1IV"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="847-ha-PhW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2740" y="2125"/>
+            <point key="canvasLocation" x="2740" y="1086.9458128078818"/>
         </scene>
         <!--Staff-->
         <scene sceneID="s6O-Wy-J90">
@@ -1385,9 +1346,9 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
         <image name="mis Eventos ICON" width="30" height="21"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bHY-ca-1RC"/>
-        <segue reference="5HF-Og-N3j"/>
-        <segue reference="Lkx-pN-wDO"/>
-        <segue reference="0RZ-hy-yi1"/>
+        <segue reference="m9c-Qf-aYu"/>
+        <segue reference="Q3T-fY-Scp"/>
+        <segue reference="LNa-su-DhX"/>
+        <segue reference="Blf-Uc-G0o"/>
     </inferredMetricsTieBreakers>
 </document>

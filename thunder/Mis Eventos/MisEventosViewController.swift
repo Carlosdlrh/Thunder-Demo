@@ -32,6 +32,7 @@ class MisEventosViewController: UIViewController, UITableViewDataSource, UITable
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
+        
         //Buscar todos mis eventos creados
         print("Revisando tus eventos creados...")
         //Conectandome directamente con la lista de Eventos Creados por el usuario
@@ -55,6 +56,7 @@ class MisEventosViewController: UIViewController, UITableViewDataSource, UITable
                 snap.Eveuid = snapshot.key
                 snap.FotoURL = eventoDir["Imagen"] as! String
                 snap.Creadoruid = eventoDir["CreadorID"] as! String
+                snap.costo = eventoDir["CostoEntradas"] as! String
                 
                 //---- Test de immprenta
                 print(snap.Eveuid)

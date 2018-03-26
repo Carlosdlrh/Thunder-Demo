@@ -11,7 +11,9 @@ import Firebase
 
 class ParticipantesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var Eventos : [Even] = []
+    var Eventos = Even()
+    
+    var Participante : [sujeto] = []
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -27,32 +29,35 @@ class ParticipantesViewController: UIViewController, UITableViewDataSource, UITa
         //Buscar todos mis eventos creados
         print("Revisando Usuarios inscritos...")
         //Conectandome directamente con la lista de Eventos Creados por el usuario
-        let snap = Even()
-        let ref = Database.database().reference().child("Eventos").child("Eventos Generales").child(snap.Eveuid).child("Inscritos")
+        let snaph = Eventos.Eveuid
+        print(snaph)
+        let ref = Database.database().reference().child("Eventos").child("Eventos Generales").child(snaph).child("Inscritos")
         ref.observe(DataEventType.childAdded, with: { snapshot in
             print(snapshot.value!)
-            let snap = Even()
+            let snapuno = sujeto()
             
             let eventoDir = snapshot.value as! [String: Any]
+            snapuno.sujetoid = eventoDir["UsuarioID"] as! String
+            print(snapuno.sujetoid)
             
-            snap.InscritoId = eventoDir["Nombre"] as! String
+            //ya tengo el ID de los sujetos que están inscritos, ahora solo falta obtener su nombre comparando el ID con la base de datos
             
-            print(snap.InscritoId)
-            
-            self.Eventos.append(snap)
+            self.Participante.append(snapuno)
             self.tableView.reloadData()
+            
+            
         })
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Eventos.count
+        return Participante.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        let evento = Eventos[indexPath.row]
+        let evento = Participante[indexPath.row]
         //Que aparescan solo los nombres en la tabla
-        cell.textLabel?.text = evento.InscritoId
+        cell.textLabel?.text = evento.sujetoid
         
         
         return cell

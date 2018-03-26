@@ -20,4 +20,6 @@ class Even{
     var FotoURL = ""
     //Foto
     var InscritoId = ""
+    //Costo
+    var costo = ""
 }

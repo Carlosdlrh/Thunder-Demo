@@ -15,7 +15,10 @@ class MiEventoViewController: UIViewController {
     var Eventos = Even()
     
     @IBOutlet weak var nombreEvento: UILabel!
+    
     @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var costoText: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +32,14 @@ class MiEventoViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         nombreEvento.text = Eventos.EveNom
+        
+        //Chcar si el costo es mayor o igual a cero para asignar valor como gratuito o no
+        let costoval = Eventos.costo
+        if costoval == "Gratuito"{
+            costoText.text = costoval
+        }else{
+            costoText.text = "$ "+costoval
+        }
         
     }
     

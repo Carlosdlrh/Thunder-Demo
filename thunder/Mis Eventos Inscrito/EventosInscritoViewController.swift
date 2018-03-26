@@ -66,6 +66,7 @@ class EventosInscritoViewController: UIViewController, UITableViewDataSource, UI
                     snap.Eveuid = snapshot.key
                     snap.FotoURL = eventoDir["Imagen"] as! String
                     snap.Creadoruid = eventoDir["CreadorID"] as! String
+                    snap.costo = eventoDir["CostoEntradas"] as! String
                 
                     //---- Test de immprenta
                     print(snap.Eveuid)
@@ -76,9 +77,9 @@ class EventosInscritoViewController: UIViewController, UITableViewDataSource, UI
                     self.Eventos.append(snap)
                     self.tableView.reloadData()
                 
-                }else{
-                    print("Error")
-                }
+                    }else{
+                        print("Error")
+                    }
                 })
             })
     }

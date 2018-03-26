@@ -36,6 +36,10 @@ class CrearMiEventoViewController: UIViewController, UIImagePickerControllerDele
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    @IBOutlet weak var costoEntradas: UITextField!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -91,14 +95,23 @@ class CrearMiEventoViewController: UIViewController, UIImagePickerControllerDele
             let creador = ref1.key
             print(creador)
             
+            //Nombre del Evento
+            let nombEve =  self.nombreEventoTextField!.text!
             
+            //Guardar el costo de entradas en el valor costo
+            var costo = self.costoEntradas.text!
+            if costo <= "0"{
+                costo = "Gratuito"
+            }else{
+                print("Costo \(costo)")
+            }
             
             //Conexion y guardar todo en base de datos
             //Guardar el Id del Evento en el usuario
             let ref = Database.database().reference().child("Eventos").child("Eventos Generales").childByAutoId()
             let EveID = ref.key
             
-            let her = ["EventoID":EveID,"CreadorID":creador, "Nombre":self.nombreEventoTextField!.text!, "Inscritos": "0", "Imagen":URLdeImagen] as [String : Any]
+            let her = ["EventoID":EveID, "CreadorID":creador, "Nombre":nombEve, "Inscritos": "0", "Imagen":URLdeImagen, "CostoEntradas":costo] as [String : Any]
             
             ref.setValue(her)
             

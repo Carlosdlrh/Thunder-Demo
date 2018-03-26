@@ -18,6 +18,7 @@ class EventoViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var inscribirseBoton: UIButton!
     @IBOutlet weak var salirBoton: UIButton!
+    @IBOutlet weak var costoText: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,14 @@ class EventoViewController: UIViewController {
         imageView.moa.url = Eventos.FotoURL
         nombreEvento.text = Eventos.EveNom
         
+        //Chcar si el costo es mayor o igual a cero para asignar valor como gratuito o no
+        let costoval = Eventos.costo
+        if costoval == "Gratuito"{
+            costoText.text = costoval
+        }else{
+            costoText.text = "$ "+costoval
+        }
+        
         //Revisar si ya estás inscrito
         //Buscar todos mis eventos creados
         print("Revisando Todos los eventos creados...")
@@ -45,7 +54,7 @@ class EventoViewController: UIViewController {
             print(snapshot.value!)
             
             
-            //Objetos a Comparar
+            //Objetos a Comparar para saber si el usuario está inscrito
             let uid = Database.database().reference().child("Usuarios").child(Auth.auth().currentUser!.uid)
             let uidc = uid.key
             
@@ -63,6 +72,7 @@ class EventoViewController: UIViewController {
         })
         
     }
+    
     //Boton de Inscribirse
     @IBAction func inscribirseBoton(_ sender: Any) {
         
@@ -95,9 +105,6 @@ class EventoViewController: UIViewController {
         performSegue(withIdentifier: "eventoReglamento", sender: nil)
     }
     
-    @IBAction func participanteBoton(_ sender: Any) {
-        performSegue(withIdentifier: "eventoParticipantes", sender: Even.self)
-    }
     
     @IBAction func lugarBoton(_ sender: Any) {
         performSegue(withIdentifier: "eventoLugar", sender: nil)
@@ -106,5 +113,18 @@ class EventoViewController: UIViewController {
     @IBAction func mensajeBoton(_ sender: Any) {
         performSegue(withIdentifier: "mensajeEvento", sender: nil)
     }
+    
+    //Preparar el Envio--------------------------
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "eventoParticipantes"{
+            let nextVC = segue.destination as! ParticipantesViewController
+            nextVC.Eventos = sender as! Even
+        }
+    }
+        
+        @IBAction func participanteBoton(_ sender: Any) {
+            let EveId = Eventos
+            performSegue(withIdentifier: "eventoParticipantes", sender: EveId)
+        }
     
 }

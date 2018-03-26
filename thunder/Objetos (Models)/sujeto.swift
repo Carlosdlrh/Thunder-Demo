@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+class sujeto{
+    //Un sujeto Tiene
+    //ID
+    var sujetoid = ""
+}
