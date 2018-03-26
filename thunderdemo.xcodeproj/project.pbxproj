@@ -28,6 +28,7 @@
 		81BE50362054DBA500C4ADFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81BE50342054DBA500C4ADFA /* LaunchScreen.storyboard */; };
 		81D0ADB820627098004FA48B /* ParticipantesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D0ADB720627098004FA48B /* ParticipantesViewController.swift */; };
 		81DFE6F52068935D005A6439 /* sujeto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFE6F42068935D005A6439 /* sujeto.swift */; };
+		81DFE6F72068B745005A6439 /* PerfilTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFE6F62068B745005A6439 /* PerfilTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		81BE50372054DBA500C4ADFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81D0ADB720627098004FA48B /* ParticipantesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantesViewController.swift; sourceTree = "<group>"; };
 		81DFE6F42068935D005A6439 /* sujeto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sujeto.swift; sourceTree = "<group>"; };
+		81DFE6F62068B745005A6439 /* PerfilTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilTableViewController.swift; sourceTree = "<group>"; };
 		8A21EB600483457B5C81E78B /* Pods_thunder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_thunder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE451B3C22C7CA4662D661C /* Pods-thunder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thunder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-thunder/Pods-thunder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +96,7 @@
 				817FEA242061CA910096FB03 /* MapViewController.swift */,
 				817FEA262062466C0096FB03 /* ChatLogViewController.swift */,
 				81D0ADB720627098004FA48B /* ParticipantesViewController.swift */,
+				81DFE6F62068B745005A6439 /* PerfilTableViewController.swift */,
 			);
 			path = "Dentro de Evento";
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81DFE6F72068B745005A6439 /* PerfilTableViewController.swift in Sources */,
 				818AA575205645F10046CD50 /* EventoInscritoViewController.swift in Sources */,
 				81DFE6F52068935D005A6439 /* sujeto.swift in Sources */,
 				81B4254C205B270D00058675 /* CrearMiEventoViewController.swift in Sources */,

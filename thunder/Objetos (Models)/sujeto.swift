@@ -12,4 +12,6 @@ class sujeto{
     //Un sujeto Tiene
     //ID
     var sujetoid = ""
+    // Nombre
+    var sujetoNom = ""
 }

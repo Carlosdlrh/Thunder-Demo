@@ -37,7 +37,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         //Quary para conectarse y cargar usuario registrado a base de datos
                         let ref = Database.database().reference().child("Usuarios").child(user!.uid)
                         //Libreria directa de incrucion de objetos
-                        let her = ["Nombre":"", "Descripción":"", "Pro":"", "Email":user!.email]
+                        let her = ["Nombre":"", "Descripción":"", "Pro":"", "Email":user!.email, "UserID":user!.uid]
                         
                         ref.setValue(her)
                         
