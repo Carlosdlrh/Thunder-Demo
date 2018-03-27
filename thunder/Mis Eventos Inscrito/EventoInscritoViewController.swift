@@ -34,8 +34,17 @@ class EventoInscritoViewController: UIViewController {
         performSegue(withIdentifier: "miReglamento", sender: nil)
     }
     
+    //Preparar el Envio--------------------------
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "participantesEventoInscrito"{
+            let nextVC = segue.destination as! ParticipantesViewController
+            nextVC.Eventos = sender as! Even
+        }
+    }
+    
     @IBAction func participantesBoton(_ sender: Any) {
-        performSegue(withIdentifier: "participantesEventoInscrito", sender: nil)
+        let EveId = Eventos
+        performSegue(withIdentifier: "participantesEventoInscrito", sender: EveId)
     }
     
     @IBAction func lugarBoton(_ sender: Any) {

@@ -34,13 +34,6 @@
                                 <rect key="frame" x="37" y="494" width="301" height="2"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Carlos De la Rocha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bg-2e-Oa3">
-                                <rect key="frame" x="51" y="163" width="316" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Biografía" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MeA-sg-P7u">
                                 <rect key="frame" x="30" y="542" width="107" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -122,12 +115,20 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Carlos De la Rocha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bg-2e-Oa3">
+                                <rect key="frame" x="29" y="162" width="316" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.043137254899999998" green="0.1333333333" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="Jz1-rr-Bk7"/>
                     </view>
                     <navigationItem key="navigationItem" title="Perfil" id="yJl-hP-PKu"/>
                     <connections>
+                        <outlet property="nombreText" destination="3bg-2e-Oa3" id="QNJ-SF-Rd2"/>
                         <segue destination="VAP-rJ-kh2" kind="show" identifier="perfilDisiplinas" id="EXd-fV-g9x"/>
                         <segue destination="hF8-60-ib7" kind="show" identifier="perfilAmigos" id="KHV-6H-qUC"/>
                     </connections>
@@ -532,7 +533,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="demo@thunder.com" placeholder="Type your email here" textAlignment="center" minimumFontSize="17" background="Label BG 1" translatesAutoresizingMaskIntoConstraints="NO" id="sDm-0o-CHL">
-                                <rect key="frame" x="60" y="366" width="255" height="48"/>
+                                <rect key="frame" x="63" y="418" width="255" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -540,7 +541,7 @@
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="username"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Temporal1" placeholder="Type your password" textAlignment="center" minimumFontSize="17" background="Label BG 1" translatesAutoresizingMaskIntoConstraints="NO" id="xKI-Iv-EAR">
-                                <rect key="frame" x="60" y="428" width="255" height="48"/>
+                                <rect key="frame" x="63" y="482" width="255" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -551,18 +552,18 @@
                                 </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="PxP-Wg-Ib9">
-                                <rect key="frame" x="135" y="53" width="105" height="176"/>
+                                <rect key="frame" x="135" y="85" width="105" height="176"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DEMO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVu-qi-b7q">
-                                <rect key="frame" x="147" y="245" width="80" height="21"/>
+                                <rect key="frame" x="147" y="659" width="80" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkL-w0-ML1">
-                                <rect key="frame" x="89" y="555" width="196" height="44"/>
+                                <rect key="frame" x="89" y="564" width="196" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Entrar" backgroundImage="SING RECTANGLE">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -571,13 +572,57 @@
                                     <action selector="accessTapped:" destination="DVf-nh-OZE" eventType="touchUpInside" id="27u-XR-SE4"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nombre de Usuario" placeholder="Nombre de Usuario" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" background="Label BG 1" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8cw-j4-6J9">
+                                <rect key="frame" x="62" y="352" width="256" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="username"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="Placeholder">
+                                        <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKw-KT-y5R">
+                                <rect key="frame" x="124" y="305" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="LoginBoton:" destination="DVf-nh-OZE" eventType="touchUpInside" id="PZE-7H-XPi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGA-gJ-qTG">
+                                <rect key="frame" x="224" y="305" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="sign in"/>
+                                <connections>
+                                    <action selector="signinBoton:" destination="DVf-nh-OZE" eventType="touchUpInside" id="ewP-hV-qoj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmy-4r-ra1">
+                                <rect key="frame" x="89" y="564" width="196" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="¡Registrar!" backgroundImage="SING RECTANGLE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="RegistrarBoton:" destination="DVf-nh-OZE" eventType="touchUpInside" id="Qbn-jN-gU3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.043137254899999998" green="0.1333333333" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="6G9-h8-x4e"/>
                     </view>
                     <connections>
+                        <outlet property="LoginOutlet" destination="DKw-KT-y5R" id="P0b-yR-S7R"/>
+                        <outlet property="entrarBoton" destination="mkL-w0-ML1" id="Uow-ek-yf0"/>
                         <outlet property="loginTextField" destination="sDm-0o-CHL" id="bwA-gB-Y4i"/>
+                        <outlet property="nombreTextField" destination="8cw-j4-6J9" id="UzR-f4-ejc"/>
                         <outlet property="passwordTextField" destination="xKI-Iv-EAR" id="200-7P-Iab"/>
+                        <outlet property="registrarOutlet" destination="gmy-4r-ra1" id="lZp-zv-ASH"/>
+                        <outlet property="signinOutlet" destination="gGA-gJ-qTG" id="zax-vk-vrJ"/>
                         <segue destination="ScO-Bl-pee" kind="show" identifier="login" id="Y4V-Jq-IRK"/>
                     </connections>
                 </viewController>
@@ -1329,7 +1374,7 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
         <!--Perfil-->
         <scene sceneID="RAa-tM-FRo">
             <objects>
-                <viewController id="jBh-VE-d9y" customClass="MiPerfilViewController" customModule="thunder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jBh-VE-d9y" customClass="PerfilViewController" customModule="thunder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GQV-Zf-rav">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

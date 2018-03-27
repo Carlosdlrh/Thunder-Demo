@@ -11,16 +11,30 @@ import Firebase
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
+    //Botonsitos
+    
+    @IBOutlet weak var LoginOutlet: UIButton!
+    
+    @IBOutlet weak var signinOutlet: UIButton!
+    
+    @IBOutlet weak var nombreTextField: UITextField!
+
     @IBOutlet weak var loginTextField: UITextField!
     
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet var entrarBoton: UIButton!
+    
+    @IBOutlet weak var registrarOutlet: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.nombreTextField.isHidden = true
+        self.registrarOutlet.isHidden = true
         
     }
-    
+    //Boton de Acceder
     @IBAction func accessTapped(_ sender: Any) {
         //Acceder a usuario
         Auth.auth().signIn(withEmail: loginTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
@@ -52,6 +66,30 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             }
         })
     }
+    
+    //Boton de Registrarse
+    @IBAction func RegistrarBoton(_ sender: Any) {
+        
+    }
+    
+    //Botones para cambiar de UI
+    
+    @IBAction func signinBoton(_ sender: Any) {
+        self.nombreTextField.isHidden = false
+        self.entrarBoton.isHidden = true
+        self.registrarOutlet.isHidden = false
+        
+    }
+    
+    
+    @IBAction func LoginBoton(_ sender: Any) {
+        self.nombreTextField.isHidden = true
+        self.entrarBoton.isHidden = false
+        self.registrarOutlet.isHidden = true
+        
+    }
+    
+    
     //Correcion de teclado!! --------------------
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
@@ -66,21 +104,5 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    
-    /*----------------------------
-     
-     override func didReceiveMemoryWarning() {
-     super.didReceiveMemoryWarning()
-     // Dispose of any resources that can be recreated.
-     }
-     
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
