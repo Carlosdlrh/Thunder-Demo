@@ -32,6 +32,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
         self.nombreTextField.isHidden = true
         self.registrarOutlet.isHidden = true
+        self.LoginOutlet.isEnabled = false
         
     }
     //Boton de Acceder
@@ -78,6 +79,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.nombreTextField.isHidden = false
         self.entrarBoton.isHidden = true
         self.registrarOutlet.isHidden = false
+        self.LoginOutlet.isEnabled = true
+        self.signinOutlet.isEnabled = false
         
     }
     
@@ -86,6 +89,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.nombreTextField.isHidden = true
         self.entrarBoton.isHidden = false
         self.registrarOutlet.isHidden = true
+        self.LoginOutlet.isEnabled = false
+        self.signinOutlet.isEnabled = true
         
     }
     
