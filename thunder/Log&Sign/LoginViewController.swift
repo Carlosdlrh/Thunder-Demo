@@ -42,25 +42,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             print("Intentamos acceder")
             if error != nil{
                 print("Error: \(String(describing: error))")
-                //Acceder a usuario
-                Auth.auth().createUser(withEmail: self.loginTextField.text!, password: self.passwordTextField.text!, completion: { (user, error) in
-                    print("Intentando Crear Usuario")
-                    if error != nil{
-                        print("Error: \(String(describing: error))")
-                    }else{
-                        
-                        //Quary para conectarse y cargar usuario registrado a base de datos
-                        let ref = Database.database().reference().child("Usuarios").child(user!.uid)
-                        //Libreria directa de incrucion de objetos
-                        let her = ["Nombre":"", "Descripción":"", "Pro":"", "Email":user!.email, "UserID":user!.uid]
-                        
-                        ref.setValue(her)
-                        
-                        print("¡Usuario creado con exito!")
-                        print("Bienbenido:\(String(describing: user))")
-                        self.performSegue(withIdentifier: "login", sender: nil)
-                    }
-                })
+                print("Usuario no existe")
+                
             }else{
                 print("Bienbenido:\(String(describing: user))")
                 self.performSegue(withIdentifier: "login", sender: nil)
@@ -70,7 +53,26 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     //Boton de Registrarse
     @IBAction func RegistrarBoton(_ sender: Any) {
-        
+        //Crea al usuario
+        Auth.auth().createUser(withEmail: loginTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
+            print("Intentando Crear Usuario")
+            if error != nil{
+                print("Error: \(String(describing: error))")
+            }else{
+                //Obtener el nombre
+                let nombre = self.nombreTextField.text!
+                //Quary para conectarse y cargar usuario registrado a base de datos
+                let ref = Database.database().reference().child("Usuarios").child(user!.uid)
+                //Libreria directa de incrucion de objetos
+                let her = ["Nombre":nombre, "Descripción":"", "Pro":"", "Email":user!.email, "UserID":user!.uid]
+                
+                ref.setValue(her)
+                
+                print("¡Usuario creado con exito!")
+                print("Bienbenido:\(String(describing: user))")
+                self.performSegue(withIdentifier: "login", sender: nil)
+            }
+        })
     }
     
     //Botones para cambiar de UI
@@ -81,7 +83,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.registrarOutlet.isHidden = false
         self.LoginOutlet.isEnabled = true
         self.signinOutlet.isEnabled = false
-        
     }
     
     
@@ -91,7 +92,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.registrarOutlet.isHidden = true
         self.LoginOutlet.isEnabled = false
         self.signinOutlet.isEnabled = true
-        
     }
     
     
