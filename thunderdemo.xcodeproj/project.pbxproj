@@ -10,6 +10,10 @@
 		71D79E95EF6D19F66D134512 /* Pods_thunder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A21EB600483457B5C81E78B /* Pods_thunder.framework */; };
 		817FEA252061CA910096FB03 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817FEA242061CA910096FB03 /* MapViewController.swift */; };
 		817FEA272062466C0096FB03 /* ChatLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817FEA262062466C0096FB03 /* ChatLogViewController.swift */; };
+		81877729206CB24E00646D38 /* MisEquiposTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81877728206CB24E00646D38 /* MisEquiposTableViewController.swift */; };
+		8187772D206CD94E00646D38 /* CrearEquipoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8187772C206CD94E00646D38 /* CrearEquipoViewController.swift */; };
+		81877730206CDD5E00646D38 /* Equipo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8187772F206CDD5E00646D38 /* Equipo.swift */; };
+		81877732206CDF6300646D38 /* MiEquipoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81877731206CDF6300646D38 /* MiEquipoViewController.swift */; };
 		818AA568205527560046CD50 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818AA567205527560046CD50 /* LoginViewController.swift */; };
 		818AA56A2056293F0046CD50 /* MisEventosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818AA5692056293F0046CD50 /* MisEventosViewController.swift */; };
 		818AA56D205638670046CD50 /* MiEventoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818AA56C205638670046CD50 /* MiEventoViewController.swift */; };
@@ -35,6 +39,10 @@
 		3F787B91440F09289DEC16C0 /* Pods-thunder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thunder.release.xcconfig"; path = "Pods/Target Support Files/Pods-thunder/Pods-thunder.release.xcconfig"; sourceTree = "<group>"; };
 		817FEA242061CA910096FB03 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		817FEA262062466C0096FB03 /* ChatLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogViewController.swift; sourceTree = "<group>"; };
+		81877728206CB24E00646D38 /* MisEquiposTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisEquiposTableViewController.swift; sourceTree = "<group>"; };
+		8187772C206CD94E00646D38 /* CrearEquipoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrearEquipoViewController.swift; sourceTree = "<group>"; };
+		8187772F206CDD5E00646D38 /* Equipo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipo.swift; sourceTree = "<group>"; };
+		81877731206CDF6300646D38 /* MiEquipoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiEquipoViewController.swift; sourceTree = "<group>"; };
 		818AA567205527560046CD50 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		818AA5692056293F0046CD50 /* MisEventosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisEventosViewController.swift; sourceTree = "<group>"; };
 		818AA56C205638670046CD50 /* MiEventoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiEventoViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +109,16 @@
 			path = "Dentro de Evento";
 			sourceTree = "<group>";
 		};
+		81877727206CB20A00646D38 /* Equipos */ = {
+			isa = PBXGroup;
+			children = (
+				81877728206CB24E00646D38 /* MisEquiposTableViewController.swift */,
+				8187772C206CD94E00646D38 /* CrearEquipoViewController.swift */,
+				81877731206CDF6300646D38 /* MiEquipoViewController.swift */,
+			);
+			path = Equipos;
+			sourceTree = "<group>";
+		};
 		818AA56B205629530046CD50 /* Mis Eventos */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +160,7 @@
 			children = (
 				81B340A4205A4E9F00187CF7 /* Even.swift */,
 				81DFE6F42068935D005A6439 /* sujeto.swift */,
+				8187772F206CDD5E00646D38 /* Equipo.swift */,
 			);
 			path = "Objetos (Models)";
 			sourceTree = "<group>";
@@ -175,6 +194,7 @@
 		81BE502A2054DBA500C4ADFA /* thunder */ = {
 			isa = PBXGroup;
 			children = (
+				81877727206CB20A00646D38 /* Equipos */,
 				817FEA232061CA770096FB03 /* Dentro de Evento */,
 				81B340A8205A54AF00187CF7 /* Log&Sign */,
 				81B340A3205A4E7900187CF7 /* Objetos (Models) */,
@@ -339,10 +359,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8187772D206CD94E00646D38 /* CrearEquipoViewController.swift in Sources */,
+				81877729206CB24E00646D38 /* MisEquiposTableViewController.swift in Sources */,
 				818AA575205645F10046CD50 /* EventoInscritoViewController.swift in Sources */,
 				81DFE6F52068935D005A6439 /* sujeto.swift in Sources */,
 				81B4254C205B270D00058675 /* CrearMiEventoViewController.swift in Sources */,
 				818AA56F2056406C0046CD50 /* MiPerfilViewController.swift in Sources */,
+				81877730206CDD5E00646D38 /* Equipo.swift in Sources */,
 				818AA57A2056F33E0046CD50 /* ExplorarEventoViewController.swift in Sources */,
 				81D0ADB820627098004FA48B /* ParticipantesViewController.swift in Sources */,
 				818AA568205527560046CD50 /* LoginViewController.swift in Sources */,
@@ -351,6 +374,7 @@
 				817FEA252061CA910096FB03 /* MapViewController.swift in Sources */,
 				818AA56A2056293F0046CD50 /* MisEventosViewController.swift in Sources */,
 				81B340A5205A4E9F00187CF7 /* Even.swift in Sources */,
+				81877732206CDF6300646D38 /* MiEquipoViewController.swift in Sources */,
 				818AA57820564E1D0046CD50 /* EventoViewController.swift in Sources */,
 				81DFE6F92068B8A7005A6439 /* PerfilViewController.swift in Sources */,
 				81BE502E2054DBA500C4ADFA /* ViewController.swift in Sources */,

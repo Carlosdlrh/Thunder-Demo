@@ -11,8 +11,6 @@ import Firebase
 
 class PerfilViewController: UIViewController {
     
-    var Perfil = sujeto()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
