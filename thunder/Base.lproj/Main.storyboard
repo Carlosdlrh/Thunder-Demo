@@ -1115,11 +1115,11 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
             </objects>
             <point key="canvasLocation" x="1892" y="34"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Explorar-->
         <scene sceneID="RDB-rQ-h5z">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mNu-JN-Z1X" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="history" id="fL8-uc-rWa"/>
+                    <tabBarItem key="tabBarItem" title="Explorar" image="CALENDARIO" selectedImage="CALENDARIO" id="fL8-uc-rWa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" shadowImage="Rectangle Shadow" id="vlw-te-IX0">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -1475,6 +1475,7 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
         </scene>
     </scenes>
     <resources>
+        <image name="CALENDARIO" width="30" height="33"/>
         <image name="Cancelar Botón BG" width="255" height="49"/>
         <image name="Crear Botón BG" width="255" height="48"/>
         <image name="Eventos Bar BG" width="378" height="67"/>
