@@ -94,6 +94,11 @@ class CrearEquipoViewController: UIViewController, UIImagePickerControllerDelega
             
             ref.setValue(her)
             
+            //Guardar al participante creador como participante
+            let participante = ref.child("Inscritos").childByAutoId()
+            
+            participante.child("UsuarioID").setValue(creador)
+            
             //Si todo sale bien hacemos el segue
             print("Todo correcto!")
             self.navigationController!.popToRootViewController(animated: true)

@@ -902,7 +902,7 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="idJ-J0-XIo" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Mis Equipo" image="Explorar" selectedImage="Explorar" id="I5c-Lw-mLE"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" shadowImage="Rectangle Shadow" id="EQS-cz-vJw">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" translucent="NO" shadowImage="Rectangle Shadow" id="EQS-cz-vJw">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -925,9 +925,11 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
             <objects>
                 <tableViewController id="qip-P7-gXa" customClass="MisEquiposTableViewController" customModule="thunder" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4Jp-n5-43n">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.037321366369724274" green="0.19329458475112915" blue="0.43026146292686462" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.037321366369724274" green="0.19329458475112915" blue="0.43026146292686462" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="SKy-Nx-hS2">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -964,63 +966,107 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
             <objects>
                 <viewController id="NET-Zl-30a" customClass="CrearEquipoViewController" customModule="thunder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DS4-Wg-7ro">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wdy-Re-cCq">
-                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wdy-Re-cCq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="73n-70-WNp">
-                                        <rect key="frame" x="139" y="293" width="97" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SrG-jg-sbB">
-                                        <rect key="frame" x="139" y="264" width="42" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pOT-rE-aq1">
-                                        <rect key="frame" x="67" y="54" width="240" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yrp-ff-irt">
-                                        <rect key="frame" x="112" y="205" width="166" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Selecionar Foto"/>
-                                        <connections>
-                                            <action selector="cameraTapped:" destination="NET-Zl-30a" eventType="touchUpInside" id="jAD-cp-7XB"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hu0-8p-aFO">
-                                        <rect key="frame" x="146" y="521" width="98" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Crear Equipo"/>
-                                        <connections>
-                                            <action selector="crearBoton:" destination="NET-Zl-30a" eventType="touchUpInside" id="RRp-iI-nq1"/>
-                                        </connections>
-                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="60h-Fo-UFx">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="654"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pOT-rE-aq1">
+                                                <rect key="frame" x="75" y="35" width="225" height="235"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="235" id="BLp-T4-V3b"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" placeholder="Escribe el monto en numero" textAlignment="center" minimumFontSize="17" background="Label BG 1" translatesAutoresizingMaskIntoConstraints="NO" id="G3f-sA-iNg">
+                                                <rect key="frame" x="59" y="429" width="256" height="48"/>
+                                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="1uL-bw-Lrz"/>
+                                                </constraints>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre del Equipo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdt-ow-obu">
+                                                <rect key="frame" x="67" y="380" width="222" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                                <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNa-e9-I4I">
+                                                <rect key="frame" x="75" y="305" width="225" height="45"/>
+                                                <state key="normal" title="Selecionar Foto" backgroundImage="Rectangle 4">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cameraTapped:" destination="NET-Zl-30a" eventType="touchUpInside" id="JIj-6K-UnV"/>
+                                                    <action selector="inscribirseBoton:" destination="h1n-8X-XGr" eventType="touchUpInside" id="9f7-Wa-jj8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFv-7n-Yn2">
+                                                <rect key="frame" x="59" y="564" width="256" height="48"/>
+                                                <state key="normal" title="Crear" backgroundImage="Crear Botón BG">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="crearBoton:" destination="tb4-R7-Z2C" eventType="touchUpInside" id="Xdc-yv-uMw"/>
+                                                    <action selector="crearBoton:" destination="NET-Zl-30a" eventType="touchUpInside" id="iGx-2M-3CC"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.037321366369724274" green="0.19329458475112915" blue="0.43026146292686462" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="pOT-rE-aq1" firstAttribute="leading" secondItem="HNa-e9-I4I" secondAttribute="leading" id="5GQ-om-GQi"/>
+                                            <constraint firstItem="HNa-e9-I4I" firstAttribute="top" secondItem="pOT-rE-aq1" secondAttribute="bottom" constant="35" id="9M4-H0-brJ"/>
+                                            <constraint firstItem="Xdt-ow-obu" firstAttribute="leading" secondItem="60h-Fo-UFx" secondAttribute="leading" constant="67" id="9wF-1H-9Uh"/>
+                                            <constraint firstItem="pOT-rE-aq1" firstAttribute="leading" secondItem="60h-Fo-UFx" secondAttribute="leading" constant="75" id="BKH-ca-EFc"/>
+                                            <constraint firstItem="G3f-sA-iNg" firstAttribute="top" secondItem="Xdt-ow-obu" secondAttribute="bottom" constant="16" id="CfA-Cj-zFZ"/>
+                                            <constraint firstItem="Xdt-ow-obu" firstAttribute="top" secondItem="HNa-e9-I4I" secondAttribute="bottom" constant="30" id="Ifg-fV-lKz"/>
+                                            <constraint firstAttribute="height" constant="654" id="NFp-wr-xNm"/>
+                                            <constraint firstItem="G3f-sA-iNg" firstAttribute="leading" secondItem="60h-Fo-UFx" secondAttribute="leading" constant="59" id="PIc-2d-lxD"/>
+                                            <constraint firstItem="G3f-sA-iNg" firstAttribute="centerX" secondItem="60h-Fo-UFx" secondAttribute="centerX" id="ZW3-mk-AT5"/>
+                                            <constraint firstAttribute="bottom" secondItem="G3f-sA-iNg" secondAttribute="bottom" constant="177" id="b5W-SA-IyL"/>
+                                            <constraint firstItem="G3f-sA-iNg" firstAttribute="centerX" secondItem="HNa-e9-I4I" secondAttribute="centerX" id="c4U-l3-ONi"/>
+                                            <constraint firstItem="G3f-sA-iNg" firstAttribute="centerX" secondItem="pOT-rE-aq1" secondAttribute="centerX" id="d4s-ly-O9R"/>
+                                            <constraint firstItem="G3f-sA-iNg" firstAttribute="trailing" secondItem="WFv-7n-Yn2" secondAttribute="trailing" id="lGl-a2-jtn"/>
+                                            <constraint firstItem="G3f-sA-iNg" firstAttribute="leading" secondItem="WFv-7n-Yn2" secondAttribute="leading" id="vMO-Ms-iEU"/>
+                                            <constraint firstItem="WFv-7n-Yn2" firstAttribute="top" secondItem="G3f-sA-iNg" secondAttribute="bottom" constant="87" id="wRu-CN-ddh"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
+                                <color key="backgroundColor" red="0.037321366369724274" green="0.19329458475112915" blue="0.43026146292686462" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="60h-Fo-UFx" secondAttribute="bottom" constant="-13" id="Ct4-Tn-KKh"/>
+                                    <constraint firstAttribute="trailing" secondItem="60h-Fo-UFx" secondAttribute="trailing" id="JID-1u-E4b"/>
+                                    <constraint firstItem="60h-Fo-UFx" firstAttribute="centerY" secondItem="Wdy-Re-cCq" secondAttribute="centerY" constant="6.5" id="REr-3T-paq"/>
+                                    <constraint firstItem="60h-Fo-UFx" firstAttribute="leading" secondItem="Wdy-Re-cCq" secondAttribute="leading" id="RJw-23-h5J"/>
+                                    <constraint firstItem="60h-Fo-UFx" firstAttribute="centerX" secondItem="Wdy-Re-cCq" secondAttribute="centerX" id="tzS-5s-5nc"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Wdy-Re-cCq" firstAttribute="top" secondItem="UbJ-DW-tZV" secondAttribute="top" id="YGp-cf-fFR"/>
+                            <constraint firstAttribute="trailing" secondItem="Wdy-Re-cCq" secondAttribute="trailing" id="ZcM-3e-VvJ"/>
+                            <constraint firstItem="Wdy-Re-cCq" firstAttribute="bottom" secondItem="UbJ-DW-tZV" secondAttribute="bottom" id="aeN-AC-oXM"/>
+                            <constraint firstItem="Wdy-Re-cCq" firstAttribute="leading" secondItem="DS4-Wg-7ro" secondAttribute="leading" id="w0Q-F2-dCO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="UbJ-DW-tZV"/>
                     </view>
                     <size key="freeformSize" width="375" height="812"/>
                     <connections>
-                        <outlet property="crearBoton" destination="Hu0-8p-aFO" id="vni-tp-beo"/>
+                        <outlet property="crearBoton" destination="WFv-7n-Yn2" id="B1H-yx-8nr"/>
                         <outlet property="imageView" destination="pOT-rE-aq1" id="mUK-A4-XYn"/>
-                        <outlet property="nombreEquipoTextField" destination="73n-70-WNp" id="mht-2P-Rl9"/>
+                        <outlet property="nombreEquipoTextField" destination="G3f-sA-iNg" id="TBF-mL-b0D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fEi-8X-SYf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1894" y="-689"/>
+            <point key="canvasLocation" x="1893.5999999999999" y="-689.40886699507394"/>
         </scene>
         <!--Lugar-->
         <scene sceneID="wCq-n4-kBU">
@@ -1593,7 +1639,7 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
             <objects>
                 <viewController id="B1D-eW-MoH" customClass="MiEquipoViewController" customModule="thunder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xlQ-XQ-Ju4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Profile Data BG" translatesAutoresizingMaskIntoConstraints="NO" id="So7-jY-keh">
@@ -1679,6 +1725,9 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
                                 <state key="normal" title="Participantes">
                                     <color key="titleColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </state>
+                                <connections>
+                                    <action selector="participanteBoton:" destination="B1D-eW-MoH" eventType="touchUpInside" id="2YI-nC-Fho"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Equipo de Béisbol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3U8-hx-mdV">
                                 <rect key="frame" x="37" y="158" width="316" height="41"/>
@@ -1695,11 +1744,41 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
                     <connections>
                         <outlet property="imageView" destination="BHh-aX-VwS" id="6uY-K0-JR5"/>
                         <outlet property="nombreEquipo" destination="3U8-hx-mdV" id="Kfv-3D-Cdb"/>
+                        <segue destination="oE9-db-2r2" kind="show" identifier="EquipoParticipantes" id="xyL-KF-3JZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HNU-GA-n94" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2740" y="-1417"/>
+        </scene>
+        <!--Participantes Equipos Table View Controller-->
+        <scene sceneID="oq5-OW-Fg2">
+            <objects>
+                <tableViewController id="oE9-db-2r2" customClass="ParticipantesEquiposTableViewController" customModule="thunder" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Egk-nA-CoY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.037321366369724274" green="0.19329458475112915" blue="0.43026146292686462" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.037321366369724274" green="0.19329458475112915" blue="0.43026146292686462" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="baL-ST-MD9">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="baL-ST-MD9" id="3ea-DS-uAw">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oE9-db-2r2" id="sUQ-vZ-Y8U"/>
+                            <outlet property="delegate" destination="oE9-db-2r2" id="Cm9-gb-amg"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IEZ-GB-V0b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3639" y="-1417"/>
         </scene>
     </scenes>
     <resources>
@@ -1723,9 +1802,9 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
         <image name="mis Eventos ICON" width="30" height="21"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="m9c-Qf-aYu"/>
-        <segue reference="Q3T-fY-Scp"/>
-        <segue reference="LNa-su-DhX"/>
-        <segue reference="Blf-Uc-G0o"/>
+        <segue reference="bHY-ca-1RC"/>
+        <segue reference="5HF-Og-N3j"/>
+        <segue reference="Lkx-pN-wDO"/>
+        <segue reference="0RZ-hy-yi1"/>
     </inferredMetricsTieBreakers>
 </document>

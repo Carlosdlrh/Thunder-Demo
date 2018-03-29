@@ -14,6 +14,7 @@
 		8187772D206CD94E00646D38 /* CrearEquipoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8187772C206CD94E00646D38 /* CrearEquipoViewController.swift */; };
 		81877730206CDD5E00646D38 /* Equipo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8187772F206CDD5E00646D38 /* Equipo.swift */; };
 		81877732206CDF6300646D38 /* MiEquipoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81877731206CDF6300646D38 /* MiEquipoViewController.swift */; };
+		81877735206CE52F00646D38 /* ParticipantesEquiposTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81877734206CE52F00646D38 /* ParticipantesEquiposTableViewController.swift */; };
 		818AA568205527560046CD50 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818AA567205527560046CD50 /* LoginViewController.swift */; };
 		818AA56A2056293F0046CD50 /* MisEventosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818AA5692056293F0046CD50 /* MisEventosViewController.swift */; };
 		818AA56D205638670046CD50 /* MiEventoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818AA56C205638670046CD50 /* MiEventoViewController.swift */; };
@@ -43,6 +44,7 @@
 		8187772C206CD94E00646D38 /* CrearEquipoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrearEquipoViewController.swift; sourceTree = "<group>"; };
 		8187772F206CDD5E00646D38 /* Equipo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipo.swift; sourceTree = "<group>"; };
 		81877731206CDF6300646D38 /* MiEquipoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiEquipoViewController.swift; sourceTree = "<group>"; };
+		81877734206CE52F00646D38 /* ParticipantesEquiposTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantesEquiposTableViewController.swift; sourceTree = "<group>"; };
 		818AA567205527560046CD50 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		818AA5692056293F0046CD50 /* MisEventosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisEventosViewController.swift; sourceTree = "<group>"; };
 		818AA56C205638670046CD50 /* MiEventoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiEventoViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 		81877727206CB20A00646D38 /* Equipos */ = {
 			isa = PBXGroup;
 			children = (
+				81877734206CE52F00646D38 /* ParticipantesEquiposTableViewController.swift */,
 				81877728206CB24E00646D38 /* MisEquiposTableViewController.swift */,
 				8187772C206CD94E00646D38 /* CrearEquipoViewController.swift */,
 				81877731206CDF6300646D38 /* MiEquipoViewController.swift */,
@@ -380,6 +383,7 @@
 				81BE502E2054DBA500C4ADFA /* ViewController.swift in Sources */,
 				81BE502C2054DBA500C4ADFA /* AppDelegate.swift in Sources */,
 				818AA56D205638670046CD50 /* MiEventoViewController.swift in Sources */,
+				81877735206CE52F00646D38 /* ParticipantesEquiposTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

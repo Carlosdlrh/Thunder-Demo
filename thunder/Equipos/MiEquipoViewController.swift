@@ -27,4 +27,17 @@ class MiEquipoViewController: UIViewController {
     
     }
 
+    //Preparar el Envio--------------------------
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "EquipoParticipantes"{
+            let nextVC = segue.destination as! ParticipantesEquiposTableViewController
+            nextVC.Equipos = sender as! Equip
+        }
+    }
+    
+    @IBAction func participanteBoton(_ sender: Any) {
+        let EquipId = Equipos
+        performSegue(withIdentifier: "EquipoParticipantes", sender: EquipId)
+    }
+    
 }
