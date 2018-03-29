@@ -32,6 +32,11 @@ class MiPerfilViewController: UIViewController {
         
     }
     
+    @IBAction func MisEventos(_ sender: Any) {
+        performSegue(withIdentifier: "MisEventos", sender: nil)
+    }
+    
+    
     @IBAction func DisiplinaBoton(_ sender: Any) {
         performSegue(withIdentifier: "perfilDisiplinas", sender: nil)
     }

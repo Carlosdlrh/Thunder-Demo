@@ -87,18 +87,8 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UjO-KM-j3O">
-                                <rect key="frame" x="110" y="114" width="66" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Disiplinas">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="DisiplinaBoton:" destination="FP4-Gi-ueo" eventType="touchUpInside" id="GRk-PN-dF9"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Cu-4Q-W7o">
-                                <rect key="frame" x="212" y="114" width="52" height="30"/>
+                                <rect key="frame" x="161" y="114" width="52" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Amigos">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -122,6 +112,26 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8c-46-oug">
+                                <rect key="frame" x="254" y="114" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Mis Eventos">
+                                    <color key="titleColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <connections>
+                                    <action selector="MisEventos:" destination="FP4-Gi-ueo" eventType="touchUpInside" id="LM5-io-EOv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UjO-KM-j3O">
+                                <rect key="frame" x="59" y="114" width="66" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Disiplinas">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="DisiplinaBoton:" destination="FP4-Gi-ueo" eventType="touchUpInside" id="GRk-PN-dF9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.043137254899999998" green="0.1333333333" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="Jz1-rr-Bk7"/>
@@ -131,6 +141,7 @@
                         <outlet property="nombreText" destination="3bg-2e-Oa3" id="QNJ-SF-Rd2"/>
                         <segue destination="VAP-rJ-kh2" kind="show" identifier="perfilDisiplinas" id="EXd-fV-g9x"/>
                         <segue destination="hF8-60-ib7" kind="show" identifier="perfilAmigos" id="KHV-6H-qUC"/>
+                        <segue destination="kTN-6d-bfs" kind="show" identifier="MisEventos" id="5A1-Ka-4gz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DnE-4O-Xec" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -175,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="myy-Lz-fSu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2740" y="-1417"/>
+            <point key="canvasLocation" x="3490" y="2124"/>
         </scene>
         <!--Crear Mi Evento View Controller-->
         <scene sceneID="ukD-AH-sVx">
@@ -344,7 +355,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SEm-jW-0M9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3488.8000000000002" y="-1182.2660098522167"/>
+            <point key="canvasLocation" x="3490" y="3372"/>
         </scene>
         <!--Evento Inscrito View Controller-->
         <scene sceneID="5pq-8d-TXd">
@@ -822,7 +833,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9jy-3W-zfH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4272.8000000000002" y="-1417.2413793103449"/>
+            <point key="canvasLocation" x="4273" y="2124"/>
         </scene>
         <!--Reglamento General-->
         <scene sceneID="xh9-iq-kC8">
@@ -885,11 +896,11 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
             </objects>
             <point key="canvasLocation" x="1892" y="1087"/>
         </scene>
-        <!--Mis Eventos-->
+        <!--Mis Equipo-->
         <scene sceneID="dhw-FC-Isv">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="idJ-J0-XIo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Mis Eventos" image="mis Eventos ICON" selectedImage="mis Eventos ICON" id="I5c-Lw-mLE"/>
+                    <tabBarItem key="tabBarItem" title="Mis Equipo" image="Explorar" selectedImage="Explorar" id="I5c-Lw-mLE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" shadowImage="Rectangle Shadow" id="EQS-cz-vJw">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -902,12 +913,46 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="kTN-6d-bfs" kind="relationship" relationship="rootViewController" id="Cpx-in-V7A"/>
+                        <segue destination="qip-P7-gXa" kind="relationship" relationship="rootViewController" id="fUc-wS-wzR"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Lc-6Z-3Qe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1113" y="-1417"/>
+        </scene>
+        <!--Mis Equipos-->
+        <scene sceneID="t0T-FU-LJ3">
+            <objects>
+                <tableViewController id="qip-P7-gXa" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4Jp-n5-43n">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.037321366369724274" green="0.19329458475112915" blue="0.43026146292686462" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="SKy-Nx-hS2">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SKy-Nx-hS2" id="QaJ-rv-KRv">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="qip-P7-gXa" id="1jQ-yg-nkn"/>
+                            <outlet property="delegate" destination="qip-P7-gXa" id="NSZ-YU-QCe"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Mis Equipos" id="JEM-g3-vQ3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HYO-kR-ONe"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="B1D-eW-MoH" kind="show" id="ED3-tl-rNV"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wQO-J3-1bv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1892" y="-1417"/>
         </scene>
         <!--Lugar-->
         <scene sceneID="wCq-n4-kBU">
@@ -1000,13 +1045,13 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cAF-Ae-uNc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5969" y="-1417"/>
+            <point key="canvasLocation" x="5126" y="3137"/>
         </scene>
         <!--Inscrito-->
         <scene sceneID="604-aW-aPa">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lxr-Kb-dv7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Inscrito" image="Explorar" selectedImage="Explorar" id="IqF-Le-Elp"/>
+                    <tabBarItem key="tabBarItem" title="Inscrito" image="mis Eventos ICON" selectedImage="mis Eventos ICON" id="IqF-Le-Elp"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" shadowImage="Rectangle Shadow" id="ZRi-gT-4wa">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -1119,7 +1164,9 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
         <scene sceneID="RDB-rQ-h5z">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mNu-JN-Z1X" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Explorar" image="CALENDARIO" selectedImage="CALENDARIO" id="fL8-uc-rWa"/>
+                    <tabBarItem key="tabBarItem" title="Explorar" image="CALENDARIO" selectedImage="CALENDARIO" id="fL8-uc-rWa">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" shadowImage="Rectangle Shadow" id="vlw-te-IX0">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -1305,7 +1352,7 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ro3-L0-FbS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2740" y="1086.9458128078818"/>
+            <point key="canvasLocation" x="2740" y="1087"/>
         </scene>
         <!--Staff-->
         <scene sceneID="s6O-Wy-J90">
@@ -1335,7 +1382,7 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ubf-As-UTU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5126" y="-1417"/>
+            <point key="canvasLocation" x="4273" y="3137"/>
         </scene>
         <!--Participantes-->
         <scene sceneID="v77-ZO-b6W">
@@ -1471,7 +1518,116 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ElL-tj-Cnf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5969" y="2124"/>
+            <point key="canvasLocation" x="6892" y="-476"/>
+        </scene>
+        <!--Equipo-->
+        <scene sceneID="goh-28-67s">
+            <objects>
+                <viewController id="B1D-eW-MoH" customClass="PerfilViewController" customModule="thunder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xlQ-XQ-Ju4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Profile Data BG" translatesAutoresizingMaskIntoConstraints="NO" id="So7-jY-keh">
+                                <rect key="frame" x="234" y="281" width="141" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PHOTO" translatesAutoresizingMaskIntoConstraints="NO" id="BHh-aX-VwS">
+                                <rect key="frame" x="32" y="218" width="225" height="235"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Member tag" translatesAutoresizingMaskIntoConstraints="NO" id="6W6-N5-whI">
+                                <rect key="frame" x="214" y="232" width="161" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="a5J-zn-7Nc">
+                                <rect key="frame" x="37" y="494" width="301" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Biografía" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZo-bT-Ugl">
+                                <rect key="frame" x="30" y="542" width="107" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="17k" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="don-15-Ev0">
+                                <rect key="frame" x="265" y="294" width="53" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="followers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6BH-j9-wXB">
+                                <rect key="frame" x="265" y="317" width="57" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRz-jB-Po1">
+                                <rect key="frame" x="265" y="358" width="53" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sponsors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMy-oc-R0p">
+                                <rect key="frame" x="265" y="381" width="61" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Thunder pro user" translatesAutoresizingMaskIntoConstraints="NO" id="vqe-1N-dOr">
+                                <rect key="frame" x="302" y="417" width="24" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpu-Je-y0d">
+                                <rect key="frame" x="341" y="485" width="18" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="9"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nivel:20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAv-0L-CVm">
+                                <rect key="frame" x="37" y="465" width="63" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="10"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="6" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AcI-OI-qID">
+                                <rect key="frame" x="30" y="591" width="315" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur enim massa, dapibus et lacus vel, sollicitudin porttitor ante. Sed ullamcorper, libero eget lobortis tincidunt, tortor est consequat justo, quis egestas enim erat vitae massa.</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4P-JE-7Kt">
+                                <rect key="frame" x="45" y="111" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Participantes">
+                                    <color key="titleColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Equipo de Béisbol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3U8-hx-mdV">
+                                <rect key="frame" x="37" y="158" width="316" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.043137254899999998" green="0.1333333333" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="5cd-T9-Aaq"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Equipo" id="wLd-2m-z5X"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HNU-GA-n94" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2740" y="-1417.2413793103449"/>
         </scene>
     </scenes>
     <resources>
@@ -1495,9 +1651,9 @@ Mauris sit amet ante at quam tincidunt viverra. Nulla orci nibh, consectetur sit
         <image name="mis Eventos ICON" width="30" height="21"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="m9c-Qf-aYu"/>
+        <segue reference="1PW-I4-35F"/>
         <segue reference="Q3T-fY-Scp"/>
         <segue reference="LNa-su-DhX"/>
-        <segue reference="Blf-Uc-G0o"/>
+        <segue reference="7sD-Zs-7Sz"/>
     </inferredMetricsTieBreakers>
 </document>
