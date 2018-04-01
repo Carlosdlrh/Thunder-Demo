@@ -58,7 +58,7 @@ class CrearEquipoViewController: UIViewController, UIImagePickerControllerDelega
         
         //Agregar cosas a firebase
         //Creas un objeto que sostenga ese codigo "imagesFolder"
-        let imagesFolder = Storage.storage().reference().child("Imagenes").child("Eventos")
+        let imagesFolder = Storage.storage().reference().child("Imagenes").child("Equiposa")
         let imagesData = UIImageJPEGRepresentation(imageView.image!, 0.1)
         
         //Esto es para darle un numero unico a la foto -> NSUUID().uuidString

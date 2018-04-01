@@ -1,8 +1,8 @@
 //
-//  ExplorarEventoViewController.swift
+//  ExplorarEventoTableViewController.swift
 //  thunder
 //
-//  Created by CarlosDeLaRocha on 3/12/18.
+//  Created by CarlosDeLaRocha on 3/30/18.
 //  Copyright © 2018 Bonsai. All rights reserved.
 //
 
@@ -10,11 +10,9 @@ import UIKit
 import Firebase
 import moa
 
-class ExplorarEventoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ExplorarEventoTableViewController: UITableViewController {
 
     var Eventos : [Even] = []
-    
-    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,16 +57,7 @@ class ExplorarEventoViewController: UIViewController, UITableViewDataSource, UIT
             self.Eventos.append(snap)
             self.tableView.reloadData()
         })
-
-    }
-    
-    //Botones------------------------------------
-    @IBAction func explorarBoton(_ sender: Any) {
-        performSegue(withIdentifier: "explorarEvento", sender: nil)
-    }
-    
-    @IBAction func mundoBoton(_ sender: Any) {
-        performSegue(withIdentifier: "mundoEventos", sender: nil)
+        
     }
     
     //Preparar el Envio--------------------------
@@ -81,11 +70,11 @@ class ExplorarEventoViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     //Funciones de la tabla----------------------
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Eventos.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         let evento = Eventos[indexPath.row]
         //Que aparescan solo los nombres en la tabla
@@ -100,9 +89,10 @@ class ExplorarEventoViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     //Selecionar Evento
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let evento = Eventos[indexPath.row]
         performSegue(withIdentifier: "explorarEvento", sender: evento)
         
     }
+
 }

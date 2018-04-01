@@ -12,6 +12,7 @@ import Firebase
 class MiPerfilViewController: UIViewController {
     
     @IBOutlet weak var nombreText: UILabel!
+    @IBOutlet weak var apellidoText: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +24,21 @@ class MiPerfilViewController: UIViewController {
         colors.append(UIColor(red: 143/255, green: 0/255, blue: 108/255, alpha: 2))
         navigationController?.navigationBar.setGradientBackground(colors: colors)
         
-        let perf = Database.database().reference().child("Usuarios").child(Auth.auth().currentUser!.uid)
-        perf.observe(DataEventType.childAdded, with: { snapshot in
+        let userID = Auth.auth().currentUser?.uid
+        let ref = Database.database().reference().child("Usuarios")
+        ref.child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user name
+            let value = snapshot.value as? NSDictionary
+            let username = value?["Nombre"] as? String ?? ""
+            self.nombreText.text = username
             
-            print("Todo el Usuario:")
-            print(snapshot.key)
-        })
+            // Get user lastname
+            let userlast = value?["Apellido"] as? String ?? ""
+            self.apellidoText.text = userlast
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
         
     }
     

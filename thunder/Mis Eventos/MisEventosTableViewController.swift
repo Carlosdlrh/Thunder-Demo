@@ -1,8 +1,8 @@
 //
-//  MisEventosViewController.swift
+//  MisEventosTableViewController.swift
 //  thunder
 //
-//  Created by CarlosDeLaRocha on 3/11/18.
+//  Created by CarlosDeLaRocha on 3/31/18.
 //  Copyright © 2018 Bonsai. All rights reserved.
 //
 
@@ -10,11 +10,9 @@ import UIKit
 import Firebase
 import moa
 
-class MisEventosViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MisEventosTableViewController: UITableViewController {
     
     var Eventos : [Even] = []
-    
-    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,11 +71,11 @@ class MisEventosViewController: UIViewController, UITableViewDataSource, UITable
         })
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Eventos.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         let evento = Eventos[indexPath.row]
         //Que aparescan solo los nombres en la tabla
@@ -95,7 +93,7 @@ class MisEventosViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     //Selecionar Evento
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let evento = Eventos[indexPath.row]
         performSegue(withIdentifier: "miEvento", sender: evento)
         
@@ -112,5 +110,5 @@ class MisEventosViewController: UIViewController, UITableViewDataSource, UITable
     @IBAction func crearEvento(_ sender: Any) {
         performSegue(withIdentifier: "crearEvento", sender: nil)
     }
-    
+
 }

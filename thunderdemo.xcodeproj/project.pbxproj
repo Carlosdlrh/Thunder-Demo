@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		71D79E95EF6D19F66D134512 /* Pods_thunder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A21EB600483457B5C81E78B /* Pods_thunder.framework */; };
+		81761EFD206F5B8A000F60D5 /* MisEventosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81761EFC206F5B8A000F60D5 /* MisEventosTableViewController.swift */; };
+		81761EFF206F647C000F60D5 /* EventosInscritoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81761EFE206F647C000F60D5 /* EventosInscritoTableViewController.swift */; };
 		817FEA252061CA910096FB03 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817FEA242061CA910096FB03 /* MapViewController.swift */; };
 		817FEA272062466C0096FB03 /* ChatLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817FEA262062466C0096FB03 /* ChatLogViewController.swift */; };
 		81877729206CB24E00646D38 /* MisEquiposTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81877728206CB24E00646D38 /* MisEquiposTableViewController.swift */; };
@@ -16,13 +18,12 @@
 		81877732206CDF6300646D38 /* MiEquipoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81877731206CDF6300646D38 /* MiEquipoViewController.swift */; };
 		81877735206CE52F00646D38 /* ParticipantesEquiposTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81877734206CE52F00646D38 /* ParticipantesEquiposTableViewController.swift */; };
 		818AA568205527560046CD50 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818AA567205527560046CD50 /* LoginViewController.swift */; };
-		818AA56A2056293F0046CD50 /* MisEventosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818AA5692056293F0046CD50 /* MisEventosViewController.swift */; };
 		818AA56D205638670046CD50 /* MiEventoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818AA56C205638670046CD50 /* MiEventoViewController.swift */; };
 		818AA56F2056406C0046CD50 /* MiPerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818AA56E2056406C0046CD50 /* MiPerfilViewController.swift */; };
 		818AA573205644D40046CD50 /* EventosInscritoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818AA572205644D40046CD50 /* EventosInscritoViewController.swift */; };
 		818AA575205645F10046CD50 /* EventoInscritoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818AA574205645F10046CD50 /* EventoInscritoViewController.swift */; };
 		818AA57820564E1D0046CD50 /* EventoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818AA57720564E1D0046CD50 /* EventoViewController.swift */; };
-		818AA57A2056F33E0046CD50 /* ExplorarEventoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818AA5792056F33E0046CD50 /* ExplorarEventoViewController.swift */; };
+		818EA834206EFBEB008AAC6E /* ExplorarEventoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818EA833206EFBEB008AAC6E /* ExplorarEventoTableViewController.swift */; };
 		81964342205A33A700103AB3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81964341205A33A700103AB3 /* GoogleService-Info.plist */; };
 		81B340A5205A4E9F00187CF7 /* Even.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B340A4205A4E9F00187CF7 /* Even.swift */; };
 		81B4254C205B270D00058675 /* CrearMiEventoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B4254B205B270D00058675 /* CrearMiEventoViewController.swift */; };
@@ -38,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		3F787B91440F09289DEC16C0 /* Pods-thunder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thunder.release.xcconfig"; path = "Pods/Target Support Files/Pods-thunder/Pods-thunder.release.xcconfig"; sourceTree = "<group>"; };
+		81761EFC206F5B8A000F60D5 /* MisEventosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisEventosTableViewController.swift; sourceTree = "<group>"; };
+		81761EFE206F647C000F60D5 /* EventosInscritoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventosInscritoTableViewController.swift; sourceTree = "<group>"; };
 		817FEA242061CA910096FB03 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		817FEA262062466C0096FB03 /* ChatLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogViewController.swift; sourceTree = "<group>"; };
 		81877728206CB24E00646D38 /* MisEquiposTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisEquiposTableViewController.swift; sourceTree = "<group>"; };
@@ -46,13 +49,12 @@
 		81877731206CDF6300646D38 /* MiEquipoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiEquipoViewController.swift; sourceTree = "<group>"; };
 		81877734206CE52F00646D38 /* ParticipantesEquiposTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantesEquiposTableViewController.swift; sourceTree = "<group>"; };
 		818AA567205527560046CD50 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		818AA5692056293F0046CD50 /* MisEventosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisEventosViewController.swift; sourceTree = "<group>"; };
 		818AA56C205638670046CD50 /* MiEventoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiEventoViewController.swift; sourceTree = "<group>"; };
 		818AA56E2056406C0046CD50 /* MiPerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiPerfilViewController.swift; sourceTree = "<group>"; };
 		818AA572205644D40046CD50 /* EventosInscritoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventosInscritoViewController.swift; sourceTree = "<group>"; };
 		818AA574205645F10046CD50 /* EventoInscritoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoInscritoViewController.swift; sourceTree = "<group>"; };
 		818AA57720564E1D0046CD50 /* EventoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoViewController.swift; sourceTree = "<group>"; };
-		818AA5792056F33E0046CD50 /* ExplorarEventoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorarEventoViewController.swift; sourceTree = "<group>"; };
+		818EA833206EFBEB008AAC6E /* ExplorarEventoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorarEventoTableViewController.swift; sourceTree = "<group>"; };
 		81964341205A33A700103AB3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		81B340A2205A4BFC00187CF7 /* thunder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = thunder.entitlements; sourceTree = "<group>"; };
 		81B340A4205A4E9F00187CF7 /* Even.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Even.swift; sourceTree = "<group>"; };
@@ -126,8 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				81B4254B205B270D00058675 /* CrearMiEventoViewController.swift */,
-				818AA5692056293F0046CD50 /* MisEventosViewController.swift */,
 				818AA56C205638670046CD50 /* MiEventoViewController.swift */,
+				81761EFC206F5B8A000F60D5 /* MisEventosTableViewController.swift */,
 			);
 			path = "Mis Eventos";
 			sourceTree = "<group>";
@@ -145,6 +147,7 @@
 			children = (
 				818AA572205644D40046CD50 /* EventosInscritoViewController.swift */,
 				818AA574205645F10046CD50 /* EventoInscritoViewController.swift */,
+				81761EFE206F647C000F60D5 /* EventosInscritoTableViewController.swift */,
 			);
 			path = "Mis Eventos Inscrito";
 			sourceTree = "<group>";
@@ -152,8 +155,8 @@
 		818AA57B2056F3500046CD50 /* Explorar */ = {
 			isa = PBXGroup;
 			children = (
-				818AA5792056F33E0046CD50 /* ExplorarEventoViewController.swift */,
 				818AA57720564E1D0046CD50 /* EventoViewController.swift */,
+				818EA833206EFBEB008AAC6E /* ExplorarEventoTableViewController.swift */,
 			);
 			path = Explorar;
 			sourceTree = "<group>";
@@ -247,7 +250,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = Bonsai;
 				TargetAttributes = {
 					81BE50272054DBA500C4ADFA = {
@@ -366,16 +369,17 @@
 				81877729206CB24E00646D38 /* MisEquiposTableViewController.swift in Sources */,
 				818AA575205645F10046CD50 /* EventoInscritoViewController.swift in Sources */,
 				81DFE6F52068935D005A6439 /* sujeto.swift in Sources */,
+				818EA834206EFBEB008AAC6E /* ExplorarEventoTableViewController.swift in Sources */,
 				81B4254C205B270D00058675 /* CrearMiEventoViewController.swift in Sources */,
 				818AA56F2056406C0046CD50 /* MiPerfilViewController.swift in Sources */,
 				81877730206CDD5E00646D38 /* Equipo.swift in Sources */,
-				818AA57A2056F33E0046CD50 /* ExplorarEventoViewController.swift in Sources */,
 				81D0ADB820627098004FA48B /* ParticipantesViewController.swift in Sources */,
 				818AA568205527560046CD50 /* LoginViewController.swift in Sources */,
 				817FEA272062466C0096FB03 /* ChatLogViewController.swift in Sources */,
 				818AA573205644D40046CD50 /* EventosInscritoViewController.swift in Sources */,
 				817FEA252061CA910096FB03 /* MapViewController.swift in Sources */,
-				818AA56A2056293F0046CD50 /* MisEventosViewController.swift in Sources */,
+				81761EFD206F5B8A000F60D5 /* MisEventosTableViewController.swift in Sources */,
+				81761EFF206F647C000F60D5 /* EventosInscritoTableViewController.swift in Sources */,
 				81B340A5205A4E9F00187CF7 /* Even.swift in Sources */,
 				81877732206CDF6300646D38 /* MiEquipoViewController.swift in Sources */,
 				818AA57820564E1D0046CD50 /* EventoViewController.swift in Sources */,
@@ -423,6 +427,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -430,6 +435,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -480,6 +486,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -487,6 +494,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

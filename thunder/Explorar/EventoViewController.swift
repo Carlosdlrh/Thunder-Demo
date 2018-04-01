@@ -19,6 +19,8 @@ class EventoViewController: UIViewController {
     @IBOutlet weak var inscribirseBoton: UIButton!
     @IBOutlet weak var salirBoton: UIButton!
     @IBOutlet weak var costoText: UILabel!
+    @IBOutlet weak var mensajeBoton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,6 +70,19 @@ class EventoViewController: UIViewController {
                 self.salirBoton.isHidden = false
             }else{
                 print("Error")
+                //Revisar si eres el creador
+                let reftwo = Database.database().reference().child("Eventos").child("Eventos Generales").child(self.Eventos.Eveuid)
+                reftwo.observeSingleEvent(of: .value, with: { (snaps) in
+                    print(snaps.value!)
+                    let creadorDir = snaps.value as! [String: Any]
+                    let comparacion = creadorDir["CreadorID"] as! String
+                        if comparacion == uidc{
+                            //Deshabilitar boton
+                            self.inscribirseBoton.isHidden = true
+                            self.salirBoton.isHidden = true
+                            self.mensajeBoton.isEnabled = false
+                        }
+                    })
             }
         })
         

@@ -123,7 +123,6 @@ class CrearMiEventoViewController: UIViewController, UIImagePickerControllerDele
     
     @IBAction func cancelarBoton(_ sender: Any) {
     navigationController!.popToRootViewController(animated: true)
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {//Controles para quitar el teclado de la pantalla

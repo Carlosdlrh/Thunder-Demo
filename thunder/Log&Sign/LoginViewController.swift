@@ -19,6 +19,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var nombreTextField: UITextField!
 
+    @IBOutlet weak var apellidoTextField: UITextField!
+    
     @IBOutlet weak var loginTextField: UITextField!
     
     @IBOutlet weak var passwordTextField: UITextField!
@@ -27,10 +29,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var registrarOutlet: UIButton!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.nombreTextField.isHidden = true
+        self.apellidoTextField.isHidden = true
         self.registrarOutlet.isHidden = true
         self.LoginOutlet.isEnabled = false
         
@@ -61,10 +66,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             }else{
                 //Obtener el nombre
                 let nombre = self.nombreTextField.text!
+                let apellido = self.apellidoTextField.text!
+                
                 //Quary para conectarse y cargar usuario registrado a base de datos
                 let ref = Database.database().reference().child("Usuarios").child(user!.uid)
                 //Libreria directa de incrucion de objetos
-                let her = ["Nombre":nombre, "Descripción":"", "Pro":"", "Email":user!.email, "UserID":user!.uid]
+                let her = ["Nombre":nombre, "Apellido":apellido,"Descripción":"", "Pro":"", "Email":user!.email, "UserID":user!.uid]
                 
                 ref.setValue(her)
                 
@@ -79,6 +86,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func signinBoton(_ sender: Any) {
         self.nombreTextField.isHidden = false
+        self.apellidoTextField.isHidden = false
         self.entrarBoton.isHidden = true
         self.registrarOutlet.isHidden = false
         self.LoginOutlet.isEnabled = true
@@ -88,6 +96,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func LoginBoton(_ sender: Any) {
         self.nombreTextField.isHidden = true
+        self.apellidoTextField.isHidden = true
         self.entrarBoton.isHidden = false
         self.registrarOutlet.isHidden = true
         self.LoginOutlet.isEnabled = false
