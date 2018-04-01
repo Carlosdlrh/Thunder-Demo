@@ -14,4 +14,6 @@ class sujeto{
     var sujetoid = ""
     // Nombre
     var sujetoNom = ""
+    //Apellido
+    var sujetoApell = ""
 }

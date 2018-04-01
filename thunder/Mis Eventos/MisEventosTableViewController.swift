@@ -96,15 +96,14 @@ class MisEventosTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let evento = Eventos[indexPath.row]
         performSegue(withIdentifier: "miEvento", sender: evento)
-        
     }
+    
     //Preparar para el Envio
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "miEvento"{
             let nextVC = segue.destination as! MiEventoViewController
             nextVC.Eventos = sender as! Even
         }
-        
     }
     
     @IBAction func crearEvento(_ sender: Any) {

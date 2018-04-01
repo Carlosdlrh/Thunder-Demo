@@ -32,7 +32,7 @@
 		81BE50312054DBA500C4ADFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81BE502F2054DBA500C4ADFA /* Main.storyboard */; };
 		81BE50332054DBA500C4ADFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81BE50322054DBA500C4ADFA /* Assets.xcassets */; };
 		81BE50362054DBA500C4ADFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81BE50342054DBA500C4ADFA /* LaunchScreen.storyboard */; };
-		81D0ADB820627098004FA48B /* ParticipantesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D0ADB720627098004FA48B /* ParticipantesViewController.swift */; };
+		81C864BD2070DA6B006E07C0 /* ParticipantesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C864BC2070DA6B006E07C0 /* ParticipantesTableViewController.swift */; };
 		81DFE6F52068935D005A6439 /* sujeto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFE6F42068935D005A6439 /* sujeto.swift */; };
 		81DFE6F92068B8A7005A6439 /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFE6F82068B8A7005A6439 /* PerfilViewController.swift */; };
 /* End PBXBuildFile section */
@@ -66,7 +66,7 @@
 		81BE50322054DBA500C4ADFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81BE50352054DBA500C4ADFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81BE50372054DBA500C4ADFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		81D0ADB720627098004FA48B /* ParticipantesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantesViewController.swift; sourceTree = "<group>"; };
+		81C864BC2070DA6B006E07C0 /* ParticipantesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantesTableViewController.swift; sourceTree = "<group>"; };
 		81DFE6F42068935D005A6439 /* sujeto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sujeto.swift; sourceTree = "<group>"; };
 		81DFE6F82068B8A7005A6439 /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
 		8A21EB600483457B5C81E78B /* Pods_thunder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_thunder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,8 +107,8 @@
 			children = (
 				817FEA242061CA910096FB03 /* MapViewController.swift */,
 				817FEA262062466C0096FB03 /* ChatLogViewController.swift */,
-				81D0ADB720627098004FA48B /* ParticipantesViewController.swift */,
 				81DFE6F82068B8A7005A6439 /* PerfilViewController.swift */,
+				81C864BC2070DA6B006E07C0 /* ParticipantesTableViewController.swift */,
 			);
 			path = "Dentro de Evento";
 			sourceTree = "<group>";
@@ -373,7 +373,6 @@
 				81B4254C205B270D00058675 /* CrearMiEventoViewController.swift in Sources */,
 				818AA56F2056406C0046CD50 /* MiPerfilViewController.swift in Sources */,
 				81877730206CDD5E00646D38 /* Equipo.swift in Sources */,
-				81D0ADB820627098004FA48B /* ParticipantesViewController.swift in Sources */,
 				818AA568205527560046CD50 /* LoginViewController.swift in Sources */,
 				817FEA272062466C0096FB03 /* ChatLogViewController.swift in Sources */,
 				818AA573205644D40046CD50 /* EventosInscritoViewController.swift in Sources */,
@@ -388,6 +387,7 @@
 				81BE502C2054DBA500C4ADFA /* AppDelegate.swift in Sources */,
 				818AA56D205638670046CD50 /* MiEventoViewController.swift in Sources */,
 				81877735206CE52F00646D38 /* ParticipantesEquiposTableViewController.swift in Sources */,
+				81C864BD2070DA6B006E07C0 /* ParticipantesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

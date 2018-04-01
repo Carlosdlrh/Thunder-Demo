@@ -52,7 +52,7 @@ class EventoInscritoViewController: UIViewController {
     //Preparar el Envio--------------------------
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "participantesEventoInscrito"{
-            let nextVC = segue.destination as! ParticipantesViewController
+            let nextVC = segue.destination as! ParticipantesTableViewController
             nextVC.Eventos = sender as! Even
         }
     }

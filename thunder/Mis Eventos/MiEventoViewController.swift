@@ -67,7 +67,7 @@ class MiEventoViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //Envio para la pagina de particioantes
         if segue.identifier == "miParticipantes"{
-            let nextVC = segue.destination as! ParticipantesViewController
+            let nextVC = segue.destination as! ParticipantesTableViewController
             nextVC.Eventos = sender as! Even
         }
     }

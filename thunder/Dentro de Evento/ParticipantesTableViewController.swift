@@ -1,21 +1,19 @@
 //
-//  ParticipantesViewController.swift
+//  ParticipantesTableViewController.swift
 //  thunder
 //
-//  Created by CarlosDeLaRocha on 3/21/18.
+//  Created by CarlosDeLaRocha on 4/1/18.
 //  Copyright © 2018 Bonsai. All rights reserved.
 //
 
 import UIKit
 import Firebase
 
-class ParticipantesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
+class ParticipantesTableViewController: UITableViewController {
+
     var Eventos = Even()
     
     var Participantes : [sujeto] = []
-    
-    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +47,7 @@ class ParticipantesViewController: UIViewController, UITableViewDataSource, UITa
             //-----------
             
             //Objetos a Comparar
-            
+            //Obteniendo toda la información de los usuarios
             let uid = Database.database().reference().child("Usuarios")
             uid.observe(DataEventType.childAdded, with: { snaps in
                 print("Todo el Paticipante:")
@@ -68,6 +66,7 @@ class ParticipantesViewController: UIViewController, UITableViewDataSource, UITa
                     let userDir = snaps.value as! [String: Any]
                     
                     snap.sujetoNom = userDir["Nombre"] as! String
+                    snap.sujetoApell = userDir["Apellido"] as! String
                     snap.sujetoid = snaps.key
                     
                     //---- Test de immprenta
@@ -82,23 +81,32 @@ class ParticipantesViewController: UIViewController, UITableViewDataSource, UITa
                 }
                 
             })
-            
         })
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Participantes.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         let evento = Participantes[indexPath.row]
         //Que aparescan solo los nombres en la tabla
         cell.textLabel?.text = evento.sujetoNom
-        
-        
         return cell
     }
     
-
+    //Preparar para el Envio
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "tiposujeto"{
+            let nextVC = segue.destination as! PerfilViewController
+            nextVC.tipo = sender as! sujeto
+        }
+    }
+    
+    //Selecionar Evento
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let participante = Participantes[indexPath.row]
+        performSegue(withIdentifier: "tiposujeto", sender: participante)
+    }
 }
