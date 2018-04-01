@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class EventoInscritoViewController: UIViewController {
 
@@ -14,6 +15,7 @@ class EventoInscritoViewController: UIViewController {
     
     @IBOutlet weak var nombreEvento: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var partinoText: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,19 @@ class EventoInscritoViewController: UIViewController {
         //Set interface
         imageView.moa.url = Eventos.FotoURL
         nombreEvento.text = Eventos.EveNom
+        
+        //Contar a los que están inscritos
+        //Para cargar
+        print("Empezar a contar")
+        let ref = Database.database().reference().child("Eventos").child("Eventos Generales").child(Eventos.Eveuid).child("Inscritos")
+        ref.observe(.value, with: { (snapshot: DataSnapshot!) in
+            print("Got snapshot");
+            print(snapshot.childrenCount)
+            
+            let count = String(snapshot.childrenCount)
+            
+            self.partinoText.text! = count
+        })
         
     }
 

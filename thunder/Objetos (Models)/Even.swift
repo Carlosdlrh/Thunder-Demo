@@ -22,4 +22,6 @@ class Even{
     var InscritoId = ""
     //Costo
     var costo = ""
+    //Numero de participantes
+    var noInsc = UInt.self
 }

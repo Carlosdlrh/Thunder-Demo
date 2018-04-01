@@ -20,6 +20,8 @@ class MiEventoViewController: UIViewController {
     
     @IBOutlet weak var costoText: UILabel!
     
+    @IBOutlet weak var partinoText: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //Colores de la barra de estado configuracion obtenida desde el View Controller General
@@ -40,6 +42,19 @@ class MiEventoViewController: UIViewController {
         }else{
             costoText.text = "$ "+costoval
         }
+        
+        //Contar a los que están inscritos
+        //Para cargar
+        print("Empezar a contar")
+        let ref = Database.database().reference().child("Eventos").child("Eventos Generales").child(Eventos.Eveuid).child("Inscritos")
+        ref.observe(.value, with: { (snapshot: DataSnapshot!) in
+            print("Got snapshot");
+            print(snapshot.childrenCount)
+            
+            let count = String(snapshot.childrenCount)
+            
+            self.partinoText.text! = count
+        })
         
     }
     

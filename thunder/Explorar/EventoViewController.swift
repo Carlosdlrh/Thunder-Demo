@@ -21,6 +21,7 @@ class EventoViewController: UIViewController {
     @IBOutlet weak var costoText: UILabel!
     @IBOutlet weak var mensajeBoton: UIButton!
     
+    @IBOutlet weak var partinoText: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,13 +50,10 @@ class EventoViewController: UIViewController {
         //Buscar todos mis eventos creados
         print("Revisando Todos los eventos creados...")
         //Conectandome directamente con la lista de Eventos Creados por el usuario
+        //Quiero saber si el usuario está inscrito ya o es el dueño del evento
         let ref = Database.database().reference().child("Eventos").child("Eventos Generales").child(Eventos.Eveuid).child("Inscritos")
-        
-        //Cuando un Child es agregado al identificador de Eventos se puede acceder directamente a el con solo mensionarlo como clave
         ref.observe(DataEventType.childAdded, with: { snapshot in
             print(snapshot.value!)
-            
-            
             //Objetos a Comparar para saber si el usuario está inscrito
             let uid = Database.database().reference().child("Usuarios").child(Auth.auth().currentUser!.uid)
             let uidc = uid.key
@@ -70,20 +68,38 @@ class EventoViewController: UIViewController {
                 self.salirBoton.isHidden = false
             }else{
                 print("Error")
-                //Revisar si eres el creador
-                let reftwo = Database.database().reference().child("Eventos").child("Eventos Generales").child(self.Eventos.Eveuid)
-                reftwo.observeSingleEvent(of: .value, with: { (snaps) in
-                    print(snaps.value!)
-                    let creadorDir = snaps.value as! [String: Any]
-                    let comparacion = creadorDir["CreadorID"] as! String
-                        if comparacion == uidc{
-                            //Deshabilitar boton
-                            self.inscribirseBoton.isHidden = true
-                            self.salirBoton.isHidden = true
-                            self.mensajeBoton.isEnabled = false
-                        }
-                    })
             }
+        })
+        
+        //Revisar si eres el creador
+        let reftwo = Database.database().reference().child("Eventos").child("Eventos Generales").child(self.Eventos.Eveuid)
+        reftwo.observeSingleEvent(of: .value, with: { (snaps) in
+            print(snaps.value!)
+            let creadorDir = snaps.value as! [String: Any]
+            let comparacion = creadorDir["CreadorID"] as! String
+            
+            //Objetos a Comparar para saber si el usuario está inscrito
+            let uid = Database.database().reference().child("Usuarios").child(Auth.auth().currentUser!.uid)
+            let uidc = uid.key
+            
+            if comparacion == uidc{
+                //Deshabilitar boton
+                self.inscribirseBoton.isHidden = true
+                self.salirBoton.isHidden = true
+                self.mensajeBoton.isEnabled = false
+            }
+        })
+        
+        //Contar a los que están inscritos
+        //Para cargar
+        print("Starting observing");
+        ref.observe(.value, with: { (snapshot: DataSnapshot!) in
+            print("Got snapshot");
+            print(snapshot.childrenCount)
+            
+            let count = String(snapshot.childrenCount)
+            
+            self.partinoText.text! = count
         })
         
     }
