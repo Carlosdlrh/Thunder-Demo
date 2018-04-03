@@ -78,13 +78,14 @@ class ExplorarEventoTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
         let evento = Eventos[indexPath.row]
         
-        //let imagenUrl = evento.FotoURL
         let imageView = cell?.viewWithTag(2) as! UIImageView
         let url = URL(string: evento.FotoURL)
         imageView.sd_setImage(with: url)
+ 
+        let labelView = cell?.viewWithTag(3) as! UILabel
+        let eventoname = evento.EveNom
+        labelView.text = eventoname
         
-        //let labelView = cell?.viewWithTag(1) as! UILabel
-        //labelView.text = evento.EveNom
         
         return cell!
     }
