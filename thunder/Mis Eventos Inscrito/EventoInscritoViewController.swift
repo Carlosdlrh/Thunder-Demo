@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import moa
+import SDWebImage
 
 class EventoInscritoViewController: UIViewController {
 
@@ -27,7 +29,8 @@ class EventoInscritoViewController: UIViewController {
         navigationController?.navigationBar.setGradientBackground(colors: colors)
         
         //Set interface
-        imageView.moa.url = Eventos.FotoURL
+        //imageView.moa.url = Eventos.FotoURL
+        imageView.sd_setImage(with: URL(string: Eventos.FotoURL))
         nombreEvento.text = Eventos.EveNom
         
         //Contar a los que están inscritos

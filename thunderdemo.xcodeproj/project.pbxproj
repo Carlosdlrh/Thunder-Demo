@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		71D79E95EF6D19F66D134512 /* Pods_thunder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A21EB600483457B5C81E78B /* Pods_thunder.framework */; };
+		812BE36C2073307100365D06 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812BE36B2073307100365D06 /* CustomCell.swift */; };
 		81761EFD206F5B8A000F60D5 /* MisEventosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81761EFC206F5B8A000F60D5 /* MisEventosTableViewController.swift */; };
 		81761EFF206F647C000F60D5 /* EventosInscritoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81761EFE206F647C000F60D5 /* EventosInscritoTableViewController.swift */; };
 		817FEA252061CA910096FB03 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817FEA242061CA910096FB03 /* MapViewController.swift */; };
@@ -39,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		3F787B91440F09289DEC16C0 /* Pods-thunder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thunder.release.xcconfig"; path = "Pods/Target Support Files/Pods-thunder/Pods-thunder.release.xcconfig"; sourceTree = "<group>"; };
+		812BE36B2073307100365D06 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		812BE36D20733C1400365D06 /* thunder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "thunder-Bridging-Header.h"; sourceTree = "<group>"; };
 		81761EFC206F5B8A000F60D5 /* MisEventosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisEventosTableViewController.swift; sourceTree = "<group>"; };
 		81761EFE206F647C000F60D5 /* EventosInscritoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventosInscritoTableViewController.swift; sourceTree = "<group>"; };
 		817FEA242061CA910096FB03 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +170,7 @@
 				81B340A4205A4E9F00187CF7 /* Even.swift */,
 				81DFE6F42068935D005A6439 /* sujeto.swift */,
 				8187772F206CDD5E00646D38 /* Equipo.swift */,
+				812BE36B2073307100365D06 /* CustomCell.swift */,
 			);
 			path = "Objetos (Models)";
 			sourceTree = "<group>";
@@ -216,6 +220,7 @@
 				81BE50322054DBA500C4ADFA /* Assets.xcassets */,
 				81BE50342054DBA500C4ADFA /* LaunchScreen.storyboard */,
 				81BE50372054DBA500C4ADFA /* Info.plist */,
+				812BE36D20733C1400365D06 /* thunder-Bridging-Header.h */,
 			);
 			path = thunder;
 			sourceTree = "<group>";
@@ -255,6 +260,7 @@
 				TargetAttributes = {
 					81BE50272054DBA500C4ADFA = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -322,6 +328,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/moa/moa.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -331,6 +338,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/moa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -387,6 +395,7 @@
 				81BE502C2054DBA500C4ADFA /* AppDelegate.swift in Sources */,
 				818AA56D205638670046CD50 /* MiEventoViewController.swift in Sources */,
 				81877735206CE52F00646D38 /* ParticipantesEquiposTableViewController.swift in Sources */,
+				812BE36C2073307100365D06 /* CustomCell.swift in Sources */,
 				81C864BD2070DA6B006E07C0 /* ParticipantesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -529,6 +538,7 @@
 			baseConfigurationReference = FFE451B3C22C7CA4662D661C /* Pods-thunder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = thunder/thunder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DAP93Y9V3D;
@@ -536,6 +546,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Bonsai.thunderdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "thunder/thunder-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -546,6 +558,7 @@
 			baseConfigurationReference = 3F787B91440F09289DEC16C0 /* Pods-thunder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = thunder/thunder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DAP93Y9V3D;
@@ -553,6 +566,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Bonsai.thunderdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "thunder/thunder-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

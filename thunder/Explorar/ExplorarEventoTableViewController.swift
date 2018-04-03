@@ -8,10 +8,10 @@
 
 import UIKit
 import Firebase
-import moa
+import SDWebImage
 
 class ExplorarEventoTableViewController: UITableViewController {
-
+    
     var Eventos : [Even] = []
     
     override func viewDidLoad() {
@@ -75,17 +75,18 @@ class ExplorarEventoTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
         let evento = Eventos[indexPath.row]
-        //Que aparescan solo los nombres en la tabla
-        cell.textLabel?.text = evento.EveNom
         
-        //Ver imagen del Evento en la lista
-        cell.imageView?.image = UIImage(named: "PHOTO")
-        cell.imageView?.contentMode = .scaleAspectFit
-        cell.imageView?.moa.url = evento.FotoURL
+        //let imagenUrl = evento.FotoURL
+        let imageView = cell?.viewWithTag(2) as! UIImageView
+        let url = URL(string: evento.FotoURL)
+        imageView.sd_setImage(with: url)
         
-        return cell
+        //let labelView = cell?.viewWithTag(1) as! UILabel
+        //labelView.text = evento.EveNom
+        
+        return cell!
     }
     
     //Selecionar Evento

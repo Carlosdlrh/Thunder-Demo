@@ -53,6 +53,7 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - SDWebImage/Core (4.3.3)
 
 DEPENDENCIES:
   - Firebase
@@ -62,6 +63,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - IQKeyboardManagerSwift
   - moa (from `https://github.com/evgenyneu/moa.git`, branch `swift-4.0`)
+  - SDWebImage/Core
 
 EXTERNAL SOURCES:
   moa:
@@ -87,7 +89,8 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   moa: 48cda4d9e7ef141ac72999f1e15dce1fee1f1365
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
 
-PODFILE CHECKSUM: d8ff3fe157ad842fafd99c6d4c6f25a1955b63d4
+PODFILE CHECKSUM: 2e8a53440ef9288b2596a464146883ba3e33e5ef
 
 COCOAPODS: 1.4.0

@@ -13,6 +13,7 @@ class MiPerfilViewController: UIViewController {
     
     @IBOutlet weak var nombreText: UILabel!
     @IBOutlet weak var apellidoText: UILabel!
+    @IBOutlet weak var imagenPerfil: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,7 @@ class MiPerfilViewController: UIViewController {
             // Get user name
             let value = snapshot.value as? NSDictionary
             let username = value?["Nombre"] as? String ?? ""
+            
             self.nombreText.text = username
             
             // Get user lastname
