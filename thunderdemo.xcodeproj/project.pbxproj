@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		71D79E95EF6D19F66D134512 /* Pods_thunder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A21EB600483457B5C81E78B /* Pods_thunder.framework */; };
 		812BE36C2073307100365D06 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812BE36B2073307100365D06 /* CustomCell.swift */; };
+		812BE3712073D4DF00365D06 /* SolicitudesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812BE3702073D4DF00365D06 /* SolicitudesTableViewController.swift */; };
 		81761EFD206F5B8A000F60D5 /* MisEventosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81761EFC206F5B8A000F60D5 /* MisEventosTableViewController.swift */; };
 		81761EFF206F647C000F60D5 /* EventosInscritoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81761EFE206F647C000F60D5 /* EventosInscritoTableViewController.swift */; };
 		817FEA252061CA910096FB03 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817FEA242061CA910096FB03 /* MapViewController.swift */; };
@@ -42,6 +43,7 @@
 		3F787B91440F09289DEC16C0 /* Pods-thunder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thunder.release.xcconfig"; path = "Pods/Target Support Files/Pods-thunder/Pods-thunder.release.xcconfig"; sourceTree = "<group>"; };
 		812BE36B2073307100365D06 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		812BE36D20733C1400365D06 /* thunder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "thunder-Bridging-Header.h"; sourceTree = "<group>"; };
+		812BE3702073D4DF00365D06 /* SolicitudesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolicitudesTableViewController.swift; sourceTree = "<group>"; };
 		81761EFC206F5B8A000F60D5 /* MisEventosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisEventosTableViewController.swift; sourceTree = "<group>"; };
 		81761EFE206F647C000F60D5 /* EventosInscritoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventosInscritoTableViewController.swift; sourceTree = "<group>"; };
 		817FEA242061CA910096FB03 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				818AA56E2056406C0046CD50 /* MiPerfilViewController.swift */,
+				812BE3702073D4DF00365D06 /* SolicitudesTableViewController.swift */,
 			);
 			path = "Mi Perfil";
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				81761EFF206F647C000F60D5 /* EventosInscritoTableViewController.swift in Sources */,
 				81B340A5205A4E9F00187CF7 /* Even.swift in Sources */,
 				81877732206CDF6300646D38 /* MiEquipoViewController.swift in Sources */,
+				812BE3712073D4DF00365D06 /* SolicitudesTableViewController.swift in Sources */,
 				818AA57820564E1D0046CD50 /* EventoViewController.swift in Sources */,
 				81DFE6F92068B8A7005A6439 /* PerfilViewController.swift in Sources */,
 				81BE502E2054DBA500C4ADFA /* ViewController.swift in Sources */,

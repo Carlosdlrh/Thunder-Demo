@@ -16,6 +16,7 @@ class MiEquipoViewController: UIViewController {
     
     @IBOutlet weak var nombreEquipo: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var partinoText: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,21 @@ class MiEquipoViewController: UIViewController {
         //Cargar toda la información en el objeto
         imageView.moa.url = Equipos.FotoURL
         nombreEquipo.text = Equipos.EquipNom
-    
+        
+        //Crear Conexión
+        let ref = Database.database().reference().child("Equipos").child("Equipos Generales").child(Equipos.Equipuid).child("Inscritos")
+        
+        //Contar a los que están inscritos
+        //Para cargar
+        print("Starting observing");
+        ref.observe(.value, with: { (snapshot: DataSnapshot!) in
+            print("Got snapshot");
+            print(snapshot.childrenCount)
+            
+            let count = String(snapshot.childrenCount)
+            
+            self.partinoText.text! = count
+        })
     }
 
     //Preparar el Envio--------------------------

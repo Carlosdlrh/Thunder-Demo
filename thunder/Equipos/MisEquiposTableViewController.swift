@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-import moa
+import SDWebImage
 
 class MisEquiposTableViewController: UITableViewController {
 
@@ -16,7 +16,8 @@ class MisEquiposTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        // Do any additional setup after loading the view.
+        
         //Colores de la barra de estado configuracion obtenida desde el View Controller General
         var colors = [UIColor]()
         colors.append(UIColor(red: 19/255, green: 78/255, blue: 132/255, alpha: 2))
@@ -68,20 +69,19 @@ class MisEquiposTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CellEquip")
         let Equips = Equipos[indexPath.row]
-        //Que aparescan solo los nombres en la tabla
-        cell.textLabel?.text = Equips.EquipNom
         
-        //Ver imagen del Evento en la lista
-        cell.imageView?.image = UIImage(named: "PHOTO")
-        cell.imageView?.contentMode = .scaleAspectFit
-        cell.imageView?.moa.url = Equips.FotoURL
+        let imageView = cell?.viewWithTag(5) as! UIImageView
+        let url = URL(string: Equips.FotoURL)
+        imageView.sd_setImage(with: url)
+ 
         
-        self.tableView.rowHeight = UITableViewAutomaticDimension;
-        self.tableView.estimatedRowHeight = 44.0;
-        
-        return cell
+        let labelView = cell?.viewWithTag(6) as! UILabel
+        let equiponombre = Equips.EquipNom
+        labelView.text = equiponombre
+ 
+        return cell!
     }
     
     //Selecionar Evento
@@ -96,7 +96,6 @@ class MisEquiposTableViewController: UITableViewController {
             let nextVC = segue.destination as! MiEquipoViewController
             nextVC.Equipos = sender as! Equip
         }
-        
     }
     
     @IBAction func crearEquipo(_ sender: Any) {

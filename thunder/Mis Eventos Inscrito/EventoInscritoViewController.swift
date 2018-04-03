@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import moa
 import SDWebImage
 
 class EventoInscritoViewController: UIViewController {
