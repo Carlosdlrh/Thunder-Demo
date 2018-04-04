@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		71D79E95EF6D19F66D134512 /* Pods_thunder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A21EB600483457B5C81E78B /* Pods_thunder.framework */; };
+		811EC02F2075859900B0734F /* EventosEquiposTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811EC02E2075859900B0734F /* EventosEquiposTableViewController.swift */; };
+		811EC0312075871600B0734F /* CrearEventoEquipoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811EC0302075871600B0734F /* CrearEventoEquipoViewController.swift */; };
 		812BE36C2073307100365D06 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812BE36B2073307100365D06 /* CustomCell.swift */; };
 		812BE3712073D4DF00365D06 /* SolicitudesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812BE3702073D4DF00365D06 /* SolicitudesTableViewController.swift */; };
 		81761EFD206F5B8A000F60D5 /* MisEventosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81761EFC206F5B8A000F60D5 /* MisEventosTableViewController.swift */; };
@@ -41,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		3F787B91440F09289DEC16C0 /* Pods-thunder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thunder.release.xcconfig"; path = "Pods/Target Support Files/Pods-thunder/Pods-thunder.release.xcconfig"; sourceTree = "<group>"; };
+		811EC02E2075859900B0734F /* EventosEquiposTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventosEquiposTableViewController.swift; sourceTree = "<group>"; };
+		811EC0302075871600B0734F /* CrearEventoEquipoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrearEventoEquipoViewController.swift; sourceTree = "<group>"; };
 		812BE36B2073307100365D06 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		812BE36D20733C1400365D06 /* thunder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "thunder-Bridging-Header.h"; sourceTree = "<group>"; };
 		812BE3702073D4DF00365D06 /* SolicitudesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolicitudesTableViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 				81877728206CB24E00646D38 /* MisEquiposTableViewController.swift */,
 				8187772C206CD94E00646D38 /* CrearEquipoViewController.swift */,
 				81877731206CDF6300646D38 /* MiEquipoViewController.swift */,
+				811EC02E2075859900B0734F /* EventosEquiposTableViewController.swift */,
+				811EC0302075871600B0734F /* CrearEventoEquipoViewController.swift */,
 			);
 			path = Equipos;
 			sourceTree = "<group>";
@@ -379,6 +385,7 @@
 				8187772D206CD94E00646D38 /* CrearEquipoViewController.swift in Sources */,
 				81877729206CB24E00646D38 /* MisEquiposTableViewController.swift in Sources */,
 				818AA575205645F10046CD50 /* EventoInscritoViewController.swift in Sources */,
+				811EC02F2075859900B0734F /* EventosEquiposTableViewController.swift in Sources */,
 				81DFE6F52068935D005A6439 /* sujeto.swift in Sources */,
 				818EA834206EFBEB008AAC6E /* ExplorarEventoTableViewController.swift in Sources */,
 				81B4254C205B270D00058675 /* CrearMiEventoViewController.swift in Sources */,
@@ -401,6 +408,7 @@
 				81877735206CE52F00646D38 /* ParticipantesEquiposTableViewController.swift in Sources */,
 				812BE36C2073307100365D06 /* CustomCell.swift in Sources */,
 				81C864BD2070DA6B006E07C0 /* ParticipantesTableViewController.swift in Sources */,
+				811EC0312075871600B0734F /* CrearEventoEquipoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -86,7 +86,6 @@ class ExplorarEventoTableViewController: UITableViewController {
         let eventoname = evento.EveNom
         labelView.text = eventoname
         
-        
         return cell!
     }
     

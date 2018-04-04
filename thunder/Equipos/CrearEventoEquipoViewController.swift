@@ -1,15 +1,15 @@
 //
-//  CrearMiEventoViewController.swift
+//  CrearEventoEquipoViewController.swift
 //  thunder
 //
-//  Created by CarlosDeLaRocha on 3/15/18.
+//  Created by CarlosDeLaRocha on 4/4/18.
 //  Copyright © 2018 Bonsai. All rights reserved.
 //
 
 import UIKit
 import Firebase
 
-class CrearMiEventoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+class CrearEventoEquipoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
     var Eventos = Even()
     
@@ -25,8 +25,6 @@ class CrearMiEventoViewController: UIViewController, UIImagePickerControllerDele
     @IBOutlet weak var datePicker: UIDatePicker!
     
     @IBOutlet weak var costoEntradas: UITextField!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,7 +108,7 @@ class CrearMiEventoViewController: UIViewController, UIImagePickerControllerDele
     }
     
     @IBAction func cancelarBoton(_ sender: Any) {
-    navigationController!.popToRootViewController(animated: true)
+        navigationController!.popToRootViewController(animated: true)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {//Controles para quitar el teclado de la pantalla
