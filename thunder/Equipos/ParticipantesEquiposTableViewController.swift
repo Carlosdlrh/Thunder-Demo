@@ -11,8 +11,8 @@ import Firebase
 
 class ParticipantesEquiposTableViewController: UITableViewController {
 
+    //Declarar la clase de Eventos para obtener todos los eventos
     var Equipos = Equip()
-    
     var Participantes : [sujeto] = []
     
     override func viewDidLoad() {
@@ -47,7 +47,6 @@ class ParticipantesEquiposTableViewController: UITableViewController {
             //-----------
             
             //Objetos a Comparar
-            
             let uid = Database.database().reference().child("Usuarios")
             uid.observe(DataEventType.childAdded, with: { snaps in
                 print("Todo el Paticipante:")
@@ -78,11 +77,8 @@ class ParticipantesEquiposTableViewController: UITableViewController {
                 }else{
                     print("Error")
                 }
-                
             })
-            
         })
-        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -96,6 +92,20 @@ class ParticipantesEquiposTableViewController: UITableViewController {
         cell.textLabel?.text = equipo.sujetoNom
         
         return cell
+    }
+    
+    //Preparar para el Envio
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "tiposujeto"{
+            let nextVC = segue.destination as! PerfilViewController
+            nextVC.tipo = sender as! sujeto
+        }
+    }
+    
+    //Selecionar Evento
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let participante = Participantes[indexPath.row]
+        performSegue(withIdentifier: "tiposujeto", sender: participante)
     }
     
 }

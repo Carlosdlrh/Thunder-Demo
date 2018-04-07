@@ -10,9 +10,18 @@ import UIKit
 import Firebase
 import IQKeyboardManagerSwift
 
+extension UIDatePicker {
+    var textColor: UIColor? {
+        set {
+            setValue(newValue, forKeyPath: "textColor")
+        }
+        get {
+            return value(forKeyPath: "textColor") as? UIColor
+        }
+    }
+}
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+@UIApplicationMain class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
@@ -45,17 +54,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
-}
-
-extension UIDatePicker {
-    var textColor: UIColor? {
-        set {
-            setValue(newValue, forKeyPath: "textColor")
-        }
-        get {
-            return value(forKeyPath: "textColor") as? UIColor
-        }
-    }
+    
 }

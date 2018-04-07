@@ -12,24 +12,22 @@ import Firebase
 class CrearEventoEquipoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
     var Eventos = Even()
+    var Equipos = Equip()
     
     //Agregar controles para selecionar una imagen
     var imagePicker = UIImagePickerController()
     
     @IBOutlet weak var nombreEventoTextField: UITextField!
-    
     @IBOutlet weak var imageView: UIImageView!
-    
     @IBOutlet weak var crearBoton: UIButton!
-    
     @IBOutlet weak var datePicker: UIDatePicker!
-    
-    @IBOutlet weak var costoEntradas: UITextField!
+    @IBOutlet weak var timePicker: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         datePicker.textColor = .white
+        timePicker.textColor = .white
         imagePicker.delegate = self
     }
     
@@ -84,26 +82,34 @@ class CrearEventoEquipoViewController: UIViewController, UIImagePickerController
             //Nombre del Evento
             let nombEve =  self.nombreEventoTextField!.text!
             
-            //Guardar el costo de entradas en el valor costo
-            var costo = self.costoEntradas.text!
-            if costo <= "0"{
-                costo = "Gratuito"
-            }else{
-                print("Costo \(costo)")
-            }
-            
             //Conexion y guardar todo en base de datos
             //Guardar el Id del Evento en el usuario
-            let ref = Database.database().reference().child("Eventos").child("Eventos Generales").childByAutoId()
+            let ref = Database.database().reference().child("Eventos").child("Eventos Privados").child("Equipos").childByAutoId()
             let EveID = ref.key
             
-            let her = ["EventoID":EveID, "CreadorID":creador, "Nombre":nombEve, "Inscritos": "0", "Imagen":URLdeImagen, "CostoEntradas":costo] as [String : Any]
+            let her = ["EventoID":EveID, "CreadorID":creador, "Nombre":nombEve, "Inscritos": "0", "Imagen":URLdeImagen, "EquipoID":""] as [String : Any]
             
             ref.setValue(her)
+            
+            //Guardar el ID Del Evento en una lista de eventos de equipo
+            //let refequip = 
             
             //Si todo sale bien hacemos el segue
             print("Todo correcto!")
             self.navigationController!.popToRootViewController(animated: true)
+            
+            //Guardar al participante creador como participante
+            let participante = ref.child("Inscritos").childByAutoId()
+            participante.child("UsuarioID").setValue(creador)
+            
+            //Guardar el ID del Equipo
+            let equipid = self.Equipos.Equipuid
+            let equip = ref.child("EquipoID")
+            equip.setValue(equipid)
+            
+            //Guardar el ID del Evento en una lista de eventos
+            let refevequip = Database.database().reference().child("Equipos").child("Equipos Generales").child(equipid).child("Eventos").childByAutoId().child("EventoID")
+            refevequip.setValue(EveID)
         }
     }
     

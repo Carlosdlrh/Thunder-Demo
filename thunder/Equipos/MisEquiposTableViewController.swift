@@ -90,6 +90,7 @@ class MisEquiposTableViewController: UITableViewController {
         performSegue(withIdentifier: "miEquipo", sender: evento)
         
     }
+    
     //Preparar para el Envio
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "miEquipo"{

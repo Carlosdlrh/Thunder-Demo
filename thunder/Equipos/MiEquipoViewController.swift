@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-import moa
+import SDWebImage
 
 class MiEquipoViewController: UIViewController {
 
@@ -23,7 +23,7 @@ class MiEquipoViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         //Cargar toda la información en el objeto
-        imageView.moa.url = Equipos.FotoURL
+        imageView.sd_setImage(with: URL(string: Equipos.FotoURL))
         nombreEquipo.text = Equipos.EquipNom
         
         //Crear Conexión
@@ -48,11 +48,21 @@ class MiEquipoViewController: UIViewController {
             let nextVC = segue.destination as! ParticipantesEquiposTableViewController
             nextVC.Equipos = sender as! Equip
         }
+        if segue.identifier == "EventosEquipo"{
+            let nextVC = segue.destination as! EventosEquiposTableViewController
+            nextVC.Equipos = sender as! Equip
+        }
     }
     
     @IBAction func participanteBoton(_ sender: Any) {
         let EquipId = Equipos
         performSegue(withIdentifier: "EquipoParticipantes", sender: EquipId)
     }
+    
+    @IBAction func EventosEquip(_ sender: Any) {
+        let EquipId = Equipos
+        performSegue(withIdentifier: "EventosEquipo", sender: EquipId)
+    }
+    
     
 }

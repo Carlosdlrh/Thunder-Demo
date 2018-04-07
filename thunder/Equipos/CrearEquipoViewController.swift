@@ -90,14 +90,17 @@ class CrearEquipoViewController: UIViewController, UIImagePickerControllerDelega
             let ref = Database.database().reference().child("Equipos").child("Equipos Generales").childByAutoId()
             let EquipID = ref.key
             
-            let her = ["EquipoID":EquipID, "CreadorID":creador, "Nombre":nombEquip, "Inscritos": "0", "Imagen":URLdeImagen] as [String : Any]
+            let her = ["EquipoID":EquipID, "CreadorID":creador, "Nombre":nombEquip, "Inscritos": "0", "Imagen":URLdeImagen, "Eventos":"0"] as [String : Any]
             
             ref.setValue(her)
             
             //Guardar al participante creador como participante
             let participante = ref.child("Inscritos").childByAutoId()
-            
             participante.child("UsuarioID").setValue(creador)
+            
+            //Guardar el ID del Equipo en el ID del creador
+            let Equipcreado = ref1.child("Equipos").child("Equipos Creados").childByAutoId().child("EquipoID")
+            Equipcreado.setValue(EquipID)
             
             //Si todo sale bien hacemos el segue
             print("Todo correcto!")

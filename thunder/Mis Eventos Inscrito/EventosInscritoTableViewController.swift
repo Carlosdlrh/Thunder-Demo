@@ -11,7 +11,6 @@ import Firebase
 import SDWebImage
 
 class EventosInscritoTableViewController: UITableViewController {
-
     //Declarar la clase de Eventos para obtener todos los eventos
     var Eventos : [Even] = []
     
@@ -115,7 +114,6 @@ class EventosInscritoTableViewController: UITableViewController {
             let nextVC = segue.destination as! EventoInscritoViewController
             nextVC.Eventos = sender as! Even
         }
-        
     }
 
 }

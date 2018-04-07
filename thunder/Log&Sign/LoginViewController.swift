@@ -42,12 +42,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     //Boton de Acceder
     @IBAction func accessTapped(_ sender: Any) {
+        self.signinOutlet.isEnabled = false
         //Acceder a usuario
         Auth.auth().signIn(withEmail: loginTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
             print("Intentamos acceder")
             if error != nil{
                 print("Error: \(String(describing: error))")
                 print("Usuario no existe")
+                self.signinOutlet.isEnabled = true
                 
             }else{
                 print("Bienbenido:\(String(describing: user))")
@@ -58,11 +60,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     //Boton de Registrarse
     @IBAction func RegistrarBoton(_ sender: Any) {
+        self.registrarOutlet.isEnabled = false
         //Crea al usuario
         Auth.auth().createUser(withEmail: loginTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
             print("Intentando Crear Usuario")
             if error != nil{
                 print("Error: \(String(describing: error))")
+                self.registrarOutlet.isEnabled = true
             }else{
                 //Obtener el nombre
                 let nombre = self.nombreTextField.text!
@@ -71,13 +75,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 //Quary para conectarse y cargar usuario registrado a base de datos
                 let ref = Database.database().reference().child("Usuarios").child(user!.uid)
                 //Libreria directa de incrucion de objetos
-                let her = ["Nombre":nombre, "Apellido":apellido,"Descripción":"", "Pro":"", "Email":user!.email, "UserID":user!.uid]
+                let her = ["Nombre":nombre, "Apellido":apellido,"Descripción":"", "Pro":"0", "Email":user!.email, "UserID":user!.uid, "Equipos":"0"]
                 
                 ref.setValue(her)
                 
                 print("¡Usuario creado con exito!")
                 print("Bienbenido:\(String(describing: user))")
                 self.performSegue(withIdentifier: "login", sender: nil)
+                
+                
             }
         })
     }
