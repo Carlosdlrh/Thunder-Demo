@@ -76,20 +76,18 @@ class MisEventosTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        let evento = Eventos[indexPath.row]
-        //Que aparescan solo los nombres en la tabla
-        cell.textLabel?.text = evento.EveNom
-        
-        //Ver imagen del Evento en la lista
-        cell.imageView?.image = UIImage(named: "PHOTO")
-        cell.imageView?.contentMode = .scaleAspectFit
-        cell.imageView?.moa.url = evento.FotoURL
-        
-        self.tableView.rowHeight = UITableViewAutomaticDimension;
-        self.tableView.estimatedRowHeight = 44.0;
-        
-        return cell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
+            let evento = Eventos[indexPath.row]
+            
+            let imageView = cell?.viewWithTag(2) as! UIImageView
+            let url = URL(string: evento.FotoURL)
+            imageView.sd_setImage(with: url)
+            
+            let labelView = cell?.viewWithTag(3) as! UILabel
+            let eventoname = evento.EveNom
+            labelView.text = eventoname
+            
+            return cell!
     }
     
     //Selecionar Evento

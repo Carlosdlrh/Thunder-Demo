@@ -110,9 +110,21 @@ class EventosEquiposTableViewController: UITableViewController {
         if segue.identifier == "CrearEventoEquipo"{
             let nextVC = segue.destination as! CrearEventoEquipoViewController
             nextVC.Equipos = sender as! Equip
+        }else{
+            if segue.identifier == "eveEquip" {
+                let nextVC = segue.destination as! EventoEquipoViewController
+                nextVC.Eventos = sender as! Even
+            }
         }
     }
     
+    //Selecionar Evento
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let evento = Eventos[indexPath.row]
+        performSegue(withIdentifier: "eveEquip", sender: evento)
+    }
+    
+    //Crear Evento
     @IBAction func Crear(_ sender: Any) {
         let EquipId = Equipos
         performSegue(withIdentifier: "CrearEventoEquipo", sender: EquipId)

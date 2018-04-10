@@ -12,6 +12,7 @@
 		811EC0312075871600B0734F /* CrearEventoEquipoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811EC0302075871600B0734F /* CrearEventoEquipoViewController.swift */; };
 		812BE36C2073307100365D06 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812BE36B2073307100365D06 /* CustomCell.swift */; };
 		812BE3712073D4DF00365D06 /* SolicitudesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812BE3702073D4DF00365D06 /* SolicitudesTableViewController.swift */; };
+		816D4087207A086D00B2D38B /* EventoEquipoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4086207A086D00B2D38B /* EventoEquipoViewController.swift */; };
 		81761EFD206F5B8A000F60D5 /* MisEventosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81761EFC206F5B8A000F60D5 /* MisEventosTableViewController.swift */; };
 		81761EFF206F647C000F60D5 /* EventosInscritoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81761EFE206F647C000F60D5 /* EventosInscritoTableViewController.swift */; };
 		817FEA252061CA910096FB03 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817FEA242061CA910096FB03 /* MapViewController.swift */; };
@@ -48,6 +49,7 @@
 		812BE36B2073307100365D06 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		812BE36D20733C1400365D06 /* thunder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "thunder-Bridging-Header.h"; sourceTree = "<group>"; };
 		812BE3702073D4DF00365D06 /* SolicitudesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolicitudesTableViewController.swift; sourceTree = "<group>"; };
+		816D4086207A086D00B2D38B /* EventoEquipoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoEquipoViewController.swift; sourceTree = "<group>"; };
 		81761EFC206F5B8A000F60D5 /* MisEventosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisEventosTableViewController.swift; sourceTree = "<group>"; };
 		81761EFE206F647C000F60D5 /* EventosInscritoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventosInscritoTableViewController.swift; sourceTree = "<group>"; };
 		817FEA242061CA910096FB03 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		816D4085207A082800B2D38B /* EventoEquipo */ = {
+			isa = PBXGroup;
+			children = (
+				811EC02E2075859900B0734F /* EventosEquiposTableViewController.swift */,
+				811EC0302075871600B0734F /* CrearEventoEquipoViewController.swift */,
+				816D4086207A086D00B2D38B /* EventoEquipoViewController.swift */,
+			);
+			path = EventoEquipo;
+			sourceTree = "<group>";
+		};
 		817FEA232061CA770096FB03 /* Dentro de Evento */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,12 +137,11 @@
 		81877727206CB20A00646D38 /* Equipos */ = {
 			isa = PBXGroup;
 			children = (
+				816D4085207A082800B2D38B /* EventoEquipo */,
 				81877734206CE52F00646D38 /* ParticipantesEquiposTableViewController.swift */,
 				81877728206CB24E00646D38 /* MisEquiposTableViewController.swift */,
 				8187772C206CD94E00646D38 /* CrearEquipoViewController.swift */,
 				81877731206CDF6300646D38 /* MiEquipoViewController.swift */,
-				811EC02E2075859900B0734F /* EventosEquiposTableViewController.swift */,
-				811EC0302075871600B0734F /* CrearEventoEquipoViewController.swift */,
 			);
 			path = Equipos;
 			sourceTree = "<group>";
@@ -402,6 +413,7 @@
 				812BE3712073D4DF00365D06 /* SolicitudesTableViewController.swift in Sources */,
 				818AA57820564E1D0046CD50 /* EventoViewController.swift in Sources */,
 				81DFE6F92068B8A7005A6439 /* PerfilViewController.swift in Sources */,
+				816D4087207A086D00B2D38B /* EventoEquipoViewController.swift in Sources */,
 				81BE502E2054DBA500C4ADFA /* ViewController.swift in Sources */,
 				81BE502C2054DBA500C4ADFA /* AppDelegate.swift in Sources */,
 				818AA56D205638670046CD50 /* MiEventoViewController.swift in Sources */,
